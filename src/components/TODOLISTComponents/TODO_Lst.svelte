@@ -22,9 +22,8 @@
 
   
 </script>
-
-<div class="row">
-    <div class="col s12 m4">
+<div class = "container" >
+  <div class="row">
       <div class="card">
         <span class="card-title">task list</span>
         <div class="card-content" style = "height: 40vh; overflow: auto;">
@@ -42,6 +41,6 @@
           <input type = "submit" class='material-icons green-text' style= "background-color: white; border: none;" value = "add" />
           </form>
         </div>
-      </div>
     </div>
   </div>
+</div>
