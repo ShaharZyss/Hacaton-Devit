@@ -1,8 +1,51 @@
 <script>
-	export let name;
+	import Header from './components/Layout/Header.svelte';
+	import Footer from './components/Layout/Footer.svelte';
+	import LandingPage from './components/pages/LandingPage.svelte';
+	
+	let page = 0;
 </script>
 
 <main>
-	<h1 class="blue-text" >Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+
+	<div class = "header box">
+		<Header/>
+	</div>
+
+	<div class = "page box">
+	{#if page == 0}
+		<LandingPage/>
+	{/if}
+
+	</div>
+
+	<div class = "footer box">
+		<Footer/>
+	</div>
 </main>
+
+
+<style>
+	.header{
+		height: 13vh;
+	}
+
+	.footer{
+		height: 12vh;
+	}
+
+	.page{
+		height: 70vh;
+		overflow: auto;
+	}
+
+
+    .box{
+        border: 2px solid rgb(250, 187, 187);
+        padding: 0 5px;
+        margin: 0 0 15px 0px;
+        background-color: #13096e;
+		color: whitesmoke;
+        box-shadow: 5px 5px 10px 5px #13096e, -5px -5px 15px 5px  #13096e;
+    }
+</style>
