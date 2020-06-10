@@ -533,25 +533,38 @@ var app = (function () {
     const file = "src/components/Layout/Header.svelte";
 
     function create_fragment(ctx) {
-    	let h1;
+    	let t;
+    	let div;
+    	let img;
+    	let img_src_value;
 
     	const block = {
     		c: function create() {
-    			h1 = element("h1");
-    			h1.textContent = "DevIt";
-    			add_location(h1, file, 0, 0, 0);
+    			t = space();
+    			div = element("div");
+    			img = element("img");
+    			document.title = "DevIt";
+    			if (img.src !== (img_src_value = "HackathonLogo.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "logo");
+    			attr_dev(img, "width", "270px");
+    			add_location(img, file, 6, 4, 96);
+    			set_style(div, "text-align", "center");
+    			add_location(div, file, 5, 0, 56);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h1, anchor);
+    			insert_dev(target, t, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(div);
     		}
     	};
 
@@ -603,6 +616,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "contect as";
+    			set_style(h2, "text-align", "center");
     			add_location(h2, file$1, 0, 0, 0);
     		},
     		l: function claim(nodes) {

@@ -1,1 +1,1 @@
-<h2>contect as</h2>
+<h2 style = "text-align: center;">contect as</h2>
