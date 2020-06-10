@@ -1,4 +1,6 @@
 <script>
+	import ToDoLst from './components/TODOLISTComponents/TODO_Lst.svelte'
+
 	import Header from './components/Layout/Header.svelte';
 	import Footer from './components/Layout/Footer.svelte';
 	import LandingPage from './components/pages/LandingPage.svelte';
@@ -7,6 +9,7 @@
 </script>
 
 <main>
+	<ToDoLst> </ToDoLst>
 
 	<div class = "header box">
 		<Header/>
