@@ -1,6 +1,4 @@
 <script>
-	import ToDoLst from './components/TODOLISTComponents/TODO_Lst.svelte'
-
 	import Header from './components/Layout/Header.svelte';
 	import Footer from './components/Layout/Footer.svelte';
 	import LandingPage from './components/pages/LandingPage.svelte';
@@ -9,7 +7,6 @@
 </script>
 
 <main>
-	<ToDoLst> </ToDoLst>
 
 	<div class = "header box">
 		<Header/>
@@ -47,8 +44,8 @@
         border: 2px solid rgb(250, 187, 187);
         padding: 0 5px;
         margin: 0 0 15px 0px;
-        background-color: #13096e;
-		color: whitesmoke;
-        box-shadow: 5px 5px 10px 5px #13096e, -5px -5px 15px 5px  #13096e;
+        background-color: whitesmoke;
+		color: black;
+        box-shadow: 5px 5px 10px 5px whitesmoke, -5px -5px 15px 5px  whitesmoke;
     }
 </style>
