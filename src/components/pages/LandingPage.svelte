@@ -3,7 +3,6 @@
   import Schedule from "../scheduleComponents/Schedule.svelte";
   import TeamUpdates from "../TeamUpdatesComponents/TeamUpdate.svelte";
 
-  export let IsEnabled;
   export let accessLevel;
 
 </script>
@@ -51,17 +50,9 @@
     margin: 15px;
     margin-top: 0;
   }
-
-  .disable {
-    display: none;
-  }
-
-  .enable {
-    display: block;
-  }
 </style>
 
-<div class="container" class:disable={!IsEnabled} class:enable={IsEnabled}>
+<div class="container">
   <div class="toDoList">
     <ToDoLst />
   </div>

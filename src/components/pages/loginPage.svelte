@@ -4,7 +4,6 @@
 
   let name = "";
   let password = "";
-  export let IsEnabled;
 
   const handleLogin = () => {
     dispatch("login", {
@@ -14,17 +13,7 @@
   };
 </script>
 
-<style>
-  .disable {
-    display: none;
-  }
-
-  .enable {
-    display: block;
-  }
-</style>
-
-<div class="row" class:disable={!IsEnabled} class:enable={IsEnabled}>
+<div class="row">
   <div class="col s12 m6">
     <div class="card">
       <div class="card-content">
@@ -44,7 +33,9 @@
         </div>
       </div>
       <div class="card-action">
-        <button class="waves-effect waves-light btn" on:click={handleLogin}>
+        <button
+          class="waves-effect waves-light btn"
+          on:click={handleLogin}>
           <i class="material-icons left">login</i>
           Login
         </button>

@@ -19,10 +19,10 @@
 <main>
 
   <div>
-    <LoginPage IsEnabled={displayLogin} on:login={checkIfUserExists} />
+    <LoginPage on:login={checkIfUserExists} />
     {#if acl != 'waiting'}
       <div>
-        <LandingPage accessLevel={acl} IsEnabled={!displayLogin}/>
+        <LandingPage accessLevel={acl}/>
       </div>
     {/if}
   </div>

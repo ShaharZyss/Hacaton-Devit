@@ -820,28 +820,28 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$1, 25, 8, 570);
+    			add_location(span, file$1, 25, 8, 569);
     			attr_dev(div0, "class", "card-content");
     			set_style(div0, "height", "60vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$1, 26, 8, 621);
+    			add_location(div0, file$1, 26, 8, 620);
     			attr_dev(input, "id", "add-task");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "validate");
-    			add_location(input, file$1, 33, 12, 948);
+    			add_location(input, file$1, 33, 12, 947);
     			attr_dev(label, "for", "add-task");
-    			add_location(label, file$1, 34, 12, 1032);
+    			add_location(label, file$1, 34, 12, 1031);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$1, 32, 10, 896);
+    			add_location(div1, file$1, 32, 10, 895);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$1, 36, 49, 1133);
+    			add_location(i, file$1, 36, 49, 1132);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$1, 36, 10, 1094);
+    			add_location(a, file$1, 36, 10, 1093);
     			attr_dev(div2, "class", "card-action");
-    			add_location(div2, file$1, 31, 8, 860);
+    			add_location(div2, file$1, 31, 8, 859);
     			attr_dev(div3, "class", "card");
-    			add_location(div3, file$1, 24, 6, 543);
-    			attr_dev(div4, "class", "col s12 m11");
+    			add_location(div3, file$1, 24, 6, 542);
+    			attr_dev(div4, "class", "col s12 m9");
     			add_location(div4, file$1, 23, 4, 511);
     			attr_dev(div5, "class", "row");
     			add_location(div5, file$1, 22, 0, 489);
@@ -1181,7 +1181,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (53:8) {#each events_list as event, i (i)}
+    // (54:8) {#each events_list as event, i (i)}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let current;
@@ -1230,7 +1230,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(53:8) {#each events_list as event, i (i)}",
+    		source: "(54:8) {#each events_list as event, i (i)}",
     		ctx
     	});
 
@@ -1315,45 +1315,45 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$3, 50, 6, 1265);
+    			add_location(span, file$3, 51, 6, 1268);
     			attr_dev(div0, "class", "card-content");
     			set_style(div0, "height", "20vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$3, 51, 6, 1312);
+    			add_location(div0, file$3, 52, 6, 1315);
     			attr_dev(input0, "id", "add-event");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$3, 60, 10, 1630);
+    			add_location(input0, file$3, 61, 10, 1633);
     			attr_dev(label0, "for", "add-event");
-    			add_location(label0, file$3, 61, 10, 1712);
+    			add_location(label0, file$3, 62, 10, 1715);
     			attr_dev(div1, "class", "input-field inline s12 m3");
-    			add_location(div1, file$3, 59, 8, 1580);
+    			add_location(div1, file$3, 60, 8, 1583);
     			attr_dev(input1, "id", "add-date");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "datepicker");
-    			add_location(input1, file$3, 65, 10, 1823);
+    			add_location(input1, file$3, 66, 10, 1826);
     			attr_dev(label1, "for", "add-date");
-    			add_location(label1, file$3, 66, 10, 1905);
+    			add_location(label1, file$3, 67, 10, 1908);
     			attr_dev(div2, "class", "input-field inline s12 m3");
-    			add_location(div2, file$3, 64, 8, 1773);
+    			add_location(div2, file$3, 65, 8, 1776);
     			attr_dev(input2, "id", "add-time");
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "timepicker");
-    			add_location(input2, file$3, 70, 10, 2014);
+    			add_location(input2, file$3, 71, 10, 2017);
     			attr_dev(label2, "for", "add-time");
-    			add_location(label2, file$3, 71, 10, 2096);
+    			add_location(label2, file$3, 72, 10, 2099);
     			attr_dev(div3, "class", "input-field inline s12 m3");
-    			add_location(div3, file$3, 69, 8, 1964);
+    			add_location(div3, file$3, 70, 8, 1967);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$3, 75, 10, 2205);
+    			add_location(i, file$3, 76, 10, 2208);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$3, 74, 8, 2155);
+    			add_location(a, file$3, 75, 8, 2158);
     			attr_dev(div4, "class", "card-action");
-    			add_location(div4, file$3, 57, 6, 1545);
+    			add_location(div4, file$3, 58, 6, 1548);
     			attr_dev(div5, "class", "card");
-    			add_location(div5, file$3, 49, 4, 1240);
+    			add_location(div5, file$3, 50, 4, 1243);
     			attr_dev(div6, "class", "row");
-    			add_location(div6, file$3, 48, 0, 1218);
+    			add_location(div6, file$3, 49, 0, 1221);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2175,12 +2175,12 @@ var app = (function () {
     	const schedule = new Schedule({ $$inline: true });
 
     	const teamupdates0 = new TeamUpdate({
-    			props: { accessLevel: /*accessLevel*/ ctx[1] },
+    			props: { accessLevel: /*accessLevel*/ ctx[0] },
     			$$inline: true
     		});
 
     	const teamupdates1 = new TeamUpdate({
-    			props: { accessLevel: /*accessLevel*/ ctx[1] },
+    			props: { accessLevel: /*accessLevel*/ ctx[0] },
     			$$inline: true
     		});
 
@@ -2200,22 +2200,20 @@ var app = (function () {
     			t2 = space();
     			div3 = element("div");
     			create_component(teamupdates1.$$.fragment);
-    			attr_dev(div0, "class", "toDoList svelte-9ldfzt");
-    			add_location(div0, file$6, 64, 2, 959);
-    			attr_dev(div1, "class", "schedule svelte-9ldfzt");
-    			add_location(div1, file$6, 69, 4, 1038);
-    			attr_dev(div2, "class", "update svelte-9ldfzt");
-    			add_location(div2, file$6, 74, 6, 1127);
-    			attr_dev(div3, "class", "News svelte-9ldfzt");
-    			add_location(div3, file$6, 78, 6, 1205);
-    			attr_dev(div4, "class", "innerBlock svelte-9ldfzt");
-    			add_location(div4, file$6, 73, 4, 1096);
-    			attr_dev(div5, "class", "MainBlock svelte-9ldfzt");
-    			add_location(div5, file$6, 68, 2, 1010);
-    			attr_dev(div6, "class", "container svelte-9ldfzt");
-    			toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
-    			toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
-    			add_location(div6, file$6, 63, 0, 881);
+    			attr_dev(div0, "class", "toDoList svelte-1ektd3r");
+    			add_location(div0, file$6, 55, 2, 809);
+    			attr_dev(div1, "class", "schedule svelte-1ektd3r");
+    			add_location(div1, file$6, 60, 4, 888);
+    			attr_dev(div2, "class", "update svelte-1ektd3r");
+    			add_location(div2, file$6, 65, 6, 977);
+    			attr_dev(div3, "class", "News svelte-1ektd3r");
+    			add_location(div3, file$6, 69, 6, 1055);
+    			attr_dev(div4, "class", "innerBlock svelte-1ektd3r");
+    			add_location(div4, file$6, 64, 4, 946);
+    			attr_dev(div5, "class", "MainBlock svelte-1ektd3r");
+    			add_location(div5, file$6, 59, 2, 860);
+    			attr_dev(div6, "class", "container svelte-1ektd3r");
+    			add_location(div6, file$6, 54, 0, 783);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2239,19 +2237,11 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const teamupdates0_changes = {};
-    			if (dirty & /*accessLevel*/ 2) teamupdates0_changes.accessLevel = /*accessLevel*/ ctx[1];
+    			if (dirty & /*accessLevel*/ 1) teamupdates0_changes.accessLevel = /*accessLevel*/ ctx[0];
     			teamupdates0.$set(teamupdates0_changes);
     			const teamupdates1_changes = {};
-    			if (dirty & /*accessLevel*/ 2) teamupdates1_changes.accessLevel = /*accessLevel*/ ctx[1];
+    			if (dirty & /*accessLevel*/ 1) teamupdates1_changes.accessLevel = /*accessLevel*/ ctx[0];
     			teamupdates1.$set(teamupdates1_changes);
-
-    			if (dirty & /*IsEnabled*/ 1) {
-    				toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
-    			}
-
-    			if (dirty & /*IsEnabled*/ 1) {
-    				toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
-    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -2289,9 +2279,8 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	let { IsEnabled } = $$props;
     	let { accessLevel } = $$props;
-    	const writable_props = ["IsEnabled", "accessLevel"];
+    	const writable_props = ["accessLevel"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<LandingPage> was created with unknown prop '${key}'`);
@@ -2301,34 +2290,31 @@ var app = (function () {
     	validate_slots("LandingPage", $$slots, []);
 
     	$$self.$set = $$props => {
-    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
-    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
     	};
 
     	$$self.$capture_state = () => ({
     		ToDoLst: TODO_Lst,
     		Schedule,
     		TeamUpdates: TeamUpdate,
-    		IsEnabled,
     		accessLevel
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
-    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [IsEnabled, accessLevel];
+    	return [accessLevel];
     }
 
     class LandingPage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { IsEnabled: 0, accessLevel: 1 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { accessLevel: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2340,21 +2326,9 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*IsEnabled*/ ctx[0] === undefined && !("IsEnabled" in props)) {
-    			console.warn("<LandingPage> was created without expected prop 'IsEnabled'");
-    		}
-
-    		if (/*accessLevel*/ ctx[1] === undefined && !("accessLevel" in props)) {
+    		if (/*accessLevel*/ ctx[0] === undefined && !("accessLevel" in props)) {
     			console.warn("<LandingPage> was created without expected prop 'accessLevel'");
     		}
-    	}
-
-    	get IsEnabled() {
-    		throw new Error("<LandingPage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set IsEnabled(value) {
-    		throw new Error("<LandingPage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get accessLevel() {
@@ -2420,39 +2394,37 @@ var app = (function () {
     			i.textContent = "login";
     			t9 = text("\n          Login");
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$7, 30, 8, 540);
+    			add_location(span, file$7, 19, 8, 373);
     			attr_dev(input0, "id", "get-name");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$7, 32, 10, 636);
+    			add_location(input0, file$7, 21, 10, 469);
     			attr_dev(label0, "for", "get-name");
-    			add_location(label0, file$7, 33, 10, 717);
+    			add_location(label0, file$7, 22, 10, 550);
     			attr_dev(div0, "class", "input-field inline s12 m3");
-    			add_location(div0, file$7, 31, 8, 586);
+    			add_location(div0, file$7, 20, 8, 419);
     			attr_dev(input1, "id", "get-password");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "validate");
-    			add_location(input1, file$7, 37, 10, 826);
+    			add_location(input1, file$7, 26, 10, 659);
     			attr_dev(label1, "for", "get-password");
-    			add_location(label1, file$7, 42, 10, 963);
+    			add_location(label1, file$7, 31, 10, 796);
     			attr_dev(div1, "class", "input-field inline s12 m3");
-    			add_location(div1, file$7, 36, 8, 776);
+    			add_location(div1, file$7, 25, 8, 609);
     			attr_dev(div2, "class", "card-content");
-    			add_location(div2, file$7, 29, 6, 505);
+    			add_location(div2, file$7, 18, 6, 338);
     			attr_dev(i, "class", "material-icons left");
-    			add_location(i, file$7, 47, 10, 1153);
+    			add_location(i, file$7, 38, 10, 1006);
     			attr_dev(button, "class", "waves-effect waves-light btn");
-    			add_location(button, file$7, 46, 8, 1074);
+    			add_location(button, file$7, 35, 8, 907);
     			attr_dev(div3, "class", "card-action");
-    			add_location(div3, file$7, 45, 6, 1040);
+    			add_location(div3, file$7, 34, 6, 873);
     			attr_dev(div4, "class", "card");
-    			add_location(div4, file$7, 28, 4, 480);
+    			add_location(div4, file$7, 17, 4, 313);
     			attr_dev(div5, "class", "col s12 m6");
-    			add_location(div5, file$7, 27, 2, 451);
-    			attr_dev(div6, "class", "row svelte-1vhbusj");
-    			toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
-    			toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
-    			add_location(div6, file$7, 26, 0, 379);
+    			add_location(div5, file$7, 16, 2, 284);
+    			attr_dev(div6, "class", "row");
+    			add_location(div6, file$7, 15, 0, 264);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2466,13 +2438,13 @@ var app = (function () {
     			append_dev(div2, t1);
     			append_dev(div2, div0);
     			append_dev(div0, input0);
-    			set_input_value(input0, /*name*/ ctx[1]);
+    			set_input_value(input0, /*name*/ ctx[0]);
     			append_dev(div0, t2);
     			append_dev(div0, label0);
     			append_dev(div2, t4);
     			append_dev(div2, div1);
     			append_dev(div1, input1);
-    			set_input_value(input1, /*password*/ ctx[2]);
+    			set_input_value(input1, /*password*/ ctx[1]);
     			append_dev(div1, t5);
     			append_dev(div1, label1);
     			append_dev(div4, t7);
@@ -2483,29 +2455,21 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    					listen_dev(button, "click", /*handleLogin*/ ctx[3], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[3]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[4]),
+    					listen_dev(button, "click", /*handleLogin*/ ctx[2], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*name*/ 2 && input0.value !== /*name*/ ctx[1]) {
-    				set_input_value(input0, /*name*/ ctx[1]);
+    			if (dirty & /*name*/ 1 && input0.value !== /*name*/ ctx[0]) {
+    				set_input_value(input0, /*name*/ ctx[0]);
     			}
 
-    			if (dirty & /*password*/ 4 && input1.value !== /*password*/ ctx[2]) {
-    				set_input_value(input1, /*password*/ ctx[2]);
-    			}
-
-    			if (dirty & /*IsEnabled*/ 1) {
-    				toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
-    			}
-
-    			if (dirty & /*IsEnabled*/ 1) {
-    				toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
+    			if (dirty & /*password*/ 2 && input1.value !== /*password*/ ctx[1]) {
+    				set_input_value(input1, /*password*/ ctx[1]);
     			}
     		},
     		i: noop,
@@ -2532,13 +2496,12 @@ var app = (function () {
     	const dispatch = createEventDispatcher();
     	let name = "";
     	let password = "";
-    	let { IsEnabled } = $$props;
 
     	const handleLogin = () => {
     		dispatch("login", { name, password });
     	};
 
-    	const writable_props = ["IsEnabled"];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<LoginPage> was created with unknown prop '${key}'`);
@@ -2549,51 +2512,38 @@ var app = (function () {
 
     	function input0_input_handler() {
     		name = this.value;
-    		$$invalidate(1, name);
+    		$$invalidate(0, name);
     	}
 
     	function input1_input_handler() {
     		password = this.value;
-    		$$invalidate(2, password);
+    		$$invalidate(1, password);
     	}
-
-    	$$self.$set = $$props => {
-    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
-    	};
 
     	$$self.$capture_state = () => ({
     		createEventDispatcher,
     		dispatch,
     		name,
     		password,
-    		IsEnabled,
     		handleLogin
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("name" in $$props) $$invalidate(1, name = $$props.name);
-    		if ("password" in $$props) $$invalidate(2, password = $$props.password);
-    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
+    		if ("name" in $$props) $$invalidate(0, name = $$props.name);
+    		if ("password" in $$props) $$invalidate(1, password = $$props.password);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		IsEnabled,
-    		name,
-    		password,
-    		handleLogin,
-    		input0_input_handler,
-    		input1_input_handler
-    	];
+    	return [name, password, handleLogin, input0_input_handler, input1_input_handler];
     }
 
     class LoginPage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { IsEnabled: 0 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2601,21 +2551,6 @@ var app = (function () {
     			options,
     			id: create_fragment$7.name
     		});
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-
-    		if (/*IsEnabled*/ ctx[0] === undefined && !("IsEnabled" in props)) {
-    			console.warn("<LoginPage> was created without expected prop 'IsEnabled'");
-    		}
-    	}
-
-    	get IsEnabled() {
-    		throw new Error("<LoginPage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set IsEnabled(value) {
-    		throw new Error("<LoginPage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -24688,10 +24623,7 @@ var app = (function () {
     	let current;
 
     	const landingpage = new LandingPage({
-    			props: {
-    				accessLevel: /*acl*/ ctx[0],
-    				IsEnabled: !/*displayLogin*/ ctx[1]
-    			},
+    			props: { accessLevel: /*acl*/ ctx[0] },
     			$$inline: true
     		});
 
@@ -24699,7 +24631,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(landingpage.$$.fragment);
-    			add_location(div, file$8, 23, 6, 605);
+    			add_location(div, file$8, 23, 6, 580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -24709,7 +24641,6 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const landingpage_changes = {};
     			if (dirty & /*acl*/ 1) landingpage_changes.accessLevel = /*acl*/ ctx[0];
-    			if (dirty & /*displayLogin*/ 2) landingpage_changes.IsEnabled = !/*displayLogin*/ ctx[1];
     			landingpage.$set(landingpage_changes);
     		},
     		i: function intro(local) {
@@ -24743,13 +24674,8 @@ var app = (function () {
     	let div;
     	let t;
     	let current;
-
-    	const loginpage = new LoginPage({
-    			props: { IsEnabled: /*displayLogin*/ ctx[1] },
-    			$$inline: true
-    		});
-
-    	loginpage.$on("login", /*checkIfUserExists*/ ctx[2]);
+    	const loginpage = new LoginPage({ $$inline: true });
+    	loginpage.$on("login", /*checkIfUserExists*/ ctx[1]);
     	let if_block = /*acl*/ ctx[0] != "waiting" && create_if_block$1(ctx);
 
     	const block = {
@@ -24774,10 +24700,6 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			const loginpage_changes = {};
-    			if (dirty & /*displayLogin*/ 2) loginpage_changes.IsEnabled = /*displayLogin*/ ctx[1];
-    			loginpage.$set(loginpage_changes);
-
     			if (/*acl*/ ctx[0] != "waiting") {
     				if (if_block) {
     					if_block.p(ctx, dirty);
@@ -24839,7 +24761,7 @@ var app = (function () {
     			$$invalidate(0, acl = data);
 
     			if (acl != "waiting" && acl != undefined) {
-    				$$invalidate(1, displayLogin = false);
+    				displayLogin = false;
     			}
     		});
     	};
@@ -24864,14 +24786,14 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("acl" in $$props) $$invalidate(0, acl = $$props.acl);
-    		if ("displayLogin" in $$props) $$invalidate(1, displayLogin = $$props.displayLogin);
+    		if ("displayLogin" in $$props) displayLogin = $$props.displayLogin;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [acl, displayLogin, checkIfUserExists];
+    	return [acl, checkIfUserExists];
     }
 
     class App extends SvelteComponentDev {

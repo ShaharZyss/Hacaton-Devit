@@ -21,7 +21,7 @@
 </script>
 
 <div class="row">
-    <div class="col s12 m11">
+    <div class="col s12 m9">
       <div class="card">
         <span class="card-title">Card Title</span>
         <div class="card-content" style = "height: 60vh; overflow: auto;">
