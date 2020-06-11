@@ -823,28 +823,28 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$1, 25, 8, 569);
+    			add_location(span, file$1, 25, 8, 570);
     			attr_dev(div0, "class", "card-content");
-    			set_style(div0, "height", "60vh");
+    			set_style(div0, "height", "72vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$1, 26, 8, 620);
+    			add_location(div0, file$1, 26, 8, 621);
     			attr_dev(input, "id", "add-task");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "validate");
-    			add_location(input, file$1, 33, 12, 947);
+    			add_location(input, file$1, 33, 12, 948);
     			attr_dev(label, "for", "add-task");
-    			add_location(label, file$1, 34, 12, 1031);
+    			add_location(label, file$1, 34, 12, 1032);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$1, 32, 10, 895);
+    			add_location(div1, file$1, 32, 10, 896);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$1, 36, 49, 1132);
+    			add_location(i, file$1, 36, 49, 1133);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$1, 36, 10, 1093);
+    			add_location(a, file$1, 36, 10, 1094);
     			attr_dev(div2, "class", "card-action");
-    			add_location(div2, file$1, 31, 8, 859);
+    			add_location(div2, file$1, 31, 8, 860);
     			attr_dev(div3, "class", "card");
-    			add_location(div3, file$1, 24, 6, 542);
-    			attr_dev(div4, "class", "col s12 m9");
+    			add_location(div3, file$1, 24, 6, 543);
+    			attr_dev(div4, "class", "col s12 m11");
     			add_location(div4, file$1, 23, 4, 511);
     			attr_dev(div5, "class", "row");
     			add_location(div5, file$1, 22, 0, 489);
@@ -1179,22 +1179,22 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[13] = i;
+    	child_ctx[6] = list[i];
+    	child_ctx[8] = i;
     	return child_ctx;
     }
 
-    // (56:6) {#each events_list as event, i (i)}
+    // (51:6) {#each events_list as event, i (i)}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let current;
 
     	const schedevent = new ScheduledEvent({
-    			props: { scheduledEvent: /*event*/ ctx[3] },
+    			props: { scheduledEvent: /*event*/ ctx[6] },
     			$$inline: true
     		});
 
-    	schedevent.$on("delete", /*handleDelete*/ ctx[5]);
+    	schedevent.$on("delete", /*handleDelete*/ ctx[2]);
 
     	const block = {
     		key: key_1,
@@ -1211,7 +1211,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const schedevent_changes = {};
-    			if (dirty & /*events_list*/ 1) schedevent_changes.scheduledEvent = /*event*/ ctx[3];
+    			if (dirty & /*events_list*/ 1) schedevent_changes.scheduledEvent = /*event*/ ctx[6];
     			schedevent.$set(schedevent_changes);
     		},
     		i: function intro(local) {
@@ -1233,7 +1233,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(56:6) {#each events_list as event, i (i)}",
+    		source: "(51:6) {#each events_list as event, i (i)}",
     		ctx
     	});
 
@@ -1272,7 +1272,7 @@ var app = (function () {
     	let dispose;
     	let each_value = /*events_list*/ ctx[0];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*i*/ ctx[13];
+    	const get_key = ctx => /*i*/ ctx[8];
     	validate_each_keys(ctx, each_value, get_each_context$1, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -1318,45 +1318,45 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$3, 53, 4, 1212);
+    			add_location(span, file$3, 48, 4, 1303);
     			attr_dev(div0, "class", "card-content");
     			set_style(div0, "height", "20vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$3, 54, 4, 1257);
+    			add_location(div0, file$3, 49, 4, 1348);
     			attr_dev(input0, "id", "add-event");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$3, 63, 8, 1546);
+    			add_location(input0, file$3, 58, 8, 1637);
     			attr_dev(label0, "for", "add-event");
-    			add_location(label0, file$3, 64, 8, 1627);
+    			add_location(label0, file$3, 59, 8, 1699);
     			attr_dev(div1, "class", "input-field inline s12 m3");
-    			add_location(div1, file$3, 62, 6, 1498);
+    			add_location(div1, file$3, 57, 6, 1589);
     			attr_dev(input1, "id", "add-date");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "datepicker");
-    			add_location(input1, file$3, 68, 8, 1732);
+    			add_location(input1, file$3, 63, 8, 1804);
     			attr_dev(label1, "for", "add-date");
-    			add_location(label1, file$3, 69, 8, 1813);
+    			add_location(label1, file$3, 64, 8, 1867);
     			attr_dev(div2, "class", "input-field inline s12 m3");
-    			add_location(div2, file$3, 67, 6, 1684);
+    			add_location(div2, file$3, 62, 6, 1756);
     			attr_dev(input2, "id", "add-time");
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "timepicker");
-    			add_location(input2, file$3, 73, 8, 1916);
+    			add_location(input2, file$3, 68, 8, 1970);
     			attr_dev(label2, "for", "add-time");
-    			add_location(label2, file$3, 74, 8, 1997);
+    			add_location(label2, file$3, 69, 8, 2033);
     			attr_dev(div3, "class", "input-field inline s12 m3");
-    			add_location(div3, file$3, 72, 6, 1868);
+    			add_location(div3, file$3, 67, 6, 1922);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$3, 78, 8, 2100);
+    			add_location(i, file$3, 73, 8, 2136);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$3, 77, 6, 2052);
+    			add_location(a, file$3, 72, 6, 2088);
     			attr_dev(div4, "class", "card-action");
-    			add_location(div4, file$3, 60, 4, 1465);
+    			add_location(div4, file$3, 55, 4, 1556);
     			attr_dev(div5, "class", "card");
-    			add_location(div5, file$3, 52, 2, 1189);
+    			add_location(div5, file$3, 47, 2, 1280);
     			attr_dev(div6, "class", "row");
-    			add_location(div6, file$3, 51, 0, 1169);
+    			add_location(div6, file$3, 46, 0, 1260);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1376,19 +1376,16 @@ var app = (function () {
     			append_dev(div5, div4);
     			append_dev(div4, div1);
     			append_dev(div1, input0);
-    			set_input_value(input0, /*event*/ ctx[3]);
     			append_dev(div1, t3);
     			append_dev(div1, label0);
     			append_dev(div4, t5);
     			append_dev(div4, div2);
     			append_dev(div2, input1);
-    			set_input_value(input1, /*date*/ ctx[1]);
     			append_dev(div2, t6);
     			append_dev(div2, label1);
     			append_dev(div4, t8);
     			append_dev(div4, div3);
     			append_dev(div3, input2);
-    			set_input_value(input2, /*time*/ ctx[2]);
     			append_dev(div3, t9);
     			append_dev(div3, label2);
     			append_dev(div4, t11);
@@ -1397,36 +1394,18 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[7]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[8]),
-    					listen_dev(a, "click", /*handleAddition*/ ctx[4], false, false, false)
-    				];
-
+    				dispose = listen_dev(a, "click", /*handleAddition*/ ctx[1], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*events_list, handleDelete*/ 33) {
+    			if (dirty & /*events_list, handleDelete*/ 5) {
     				const each_value = /*events_list*/ ctx[0];
     				validate_each_argument(each_value);
     				group_outros();
     				validate_each_keys(ctx, each_value, get_each_context$1, get_key);
     				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div0, outro_and_destroy_block, create_each_block$1, null, get_each_context$1);
     				check_outros();
-    			}
-
-    			if (dirty & /*event*/ 8 && input0.value !== /*event*/ ctx[3]) {
-    				set_input_value(input0, /*event*/ ctx[3]);
-    			}
-
-    			if (dirty & /*date*/ 2 && input1.value !== /*date*/ ctx[1]) {
-    				set_input_value(input1, /*date*/ ctx[1]);
-    			}
-
-    			if (dirty & /*time*/ 4 && input2.value !== /*time*/ ctx[2]) {
-    				set_input_value(input2, /*time*/ ctx[2]);
     			}
     		},
     		i: function intro(local) {
@@ -1453,7 +1432,7 @@ var app = (function () {
     			}
 
     			mounted = false;
-    			run_all(dispose);
+    			dispose();
     		}
     	};
 
@@ -1490,15 +1469,12 @@ var app = (function () {
     	let newEvent = "";
     	let newDate = "";
     	let newTime = "";
-    	let event;
-    	let date;
-    	let time;
 
     	const handleAddition = () => {
+    		let event = document.getElementById("add-event").value;
+    		let date = document.getElementById("add-date").value;
+    		let time = document.getElementById("add-time").value;
     		$$invalidate(0, events_list = [...events_list, { event, date, time }]);
-    		$$invalidate(3, event = "");
-    		$$invalidate(1, date = "");
-    		$$invalidate(2, time = "");
     	};
 
     	const handleDelete = e => {
@@ -1524,21 +1500,6 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Schedule", $$slots, []);
 
-    	function input0_input_handler() {
-    		event = this.value;
-    		$$invalidate(3, event);
-    	}
-
-    	function input1_input_handler() {
-    		date = this.value;
-    		$$invalidate(1, date);
-    	}
-
-    	function input2_input_handler() {
-    		time = this.value;
-    		$$invalidate(2, time);
-    	}
-
     	$$self.$capture_state = () => ({
     		SchedEvent: ScheduledEvent,
     		onMount,
@@ -1546,9 +1507,6 @@ var app = (function () {
     		newEvent,
     		newDate,
     		newTime,
-    		event,
-    		date,
-    		time,
     		handleAddition,
     		handleDelete
     	});
@@ -1558,26 +1516,13 @@ var app = (function () {
     		if ("newEvent" in $$props) newEvent = $$props.newEvent;
     		if ("newDate" in $$props) newDate = $$props.newDate;
     		if ("newTime" in $$props) newTime = $$props.newTime;
-    		if ("event" in $$props) $$invalidate(3, event = $$props.event);
-    		if ("date" in $$props) $$invalidate(1, date = $$props.date);
-    		if ("time" in $$props) $$invalidate(2, time = $$props.time);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		events_list,
-    		date,
-    		time,
-    		event,
-    		handleAddition,
-    		handleDelete,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
-    	];
+    	return [events_list, handleAddition, handleDelete];
     }
 
     class Schedule extends SvelteComponentDev {
@@ -1952,7 +1897,7 @@ var app = (function () {
     			attr_dev(ul, "class", "collapsible popout");
     			add_location(ul, file$5, 30, 6, 706);
     			attr_dev(div0, "class", "card-content box");
-    			set_style(div0, "height", "20vh");
+    			set_style(div0, "height", "30vh");
     			set_style(div0, "overflow", "auto");
     			add_location(div0, file$5, 29, 4, 628);
     			attr_dev(div1, "class", "card");
@@ -2515,7 +2460,7 @@ var app = (function () {
     			attr_dev(ul, "class", "collapsible popout");
     			add_location(ul, file$7, 30, 6, 700);
     			attr_dev(div0, "class", "card-content box");
-    			set_style(div0, "height", "20vh");
+    			set_style(div0, "height", "30vh");
     			set_style(div0, "overflow", "auto");
     			add_location(div0, file$7, 29, 4, 622);
     			attr_dev(div1, "class", "card");

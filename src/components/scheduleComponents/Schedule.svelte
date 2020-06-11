@@ -12,16 +12,11 @@
   let newDate = "";
   let newTime = "";
 
-  let event;
-  let date;
-  let time;
-
   const handleAddition = () => {
+    let event = document.getElementById("add-event").value;
+    let date = document.getElementById("add-date").value;
+    let time = document.getElementById("add-time").value;
     events_list = [...events_list, { event: event, date: date, time: time }];
-
-    event = "";
-    date = "";
-    time = "";
   };
 
   const handleDelete = e => {
@@ -61,17 +56,17 @@
     <div class="card-action">
 
       <div class="input-field inline s12 m3">
-        <input id="add-event" type="text" class="validate" bind:value={event} />
+        <input id="add-event" type="text" class="validate" />
         <label for="add-event">Event</label>
       </div>
 
       <div class="input-field inline s12 m3">
-        <input id="add-date" type="text" class="datepicker" bind:value={date} />
+        <input id="add-date" type="text" class="datepicker" />
         <label for="add-date">Date</label>
       </div>
 
       <div class="input-field inline s12 m3">
-        <input id="add-time" type="text" class="timepicker" bind:value={time} />
+        <input id="add-time" type="text" class="timepicker" />
         <label for="add-time">Time</label>
       </div>
 

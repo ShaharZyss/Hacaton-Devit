@@ -21,10 +21,10 @@
 </script>
 
 <div class="row">
-    <div class="col s12 m9">
+    <div class="col s12 m11">
       <div class="card">
         <span class="card-title">Card Title</span>
-        <div class="card-content" style = "height: 60vh; overflow: auto;">
+        <div class="card-content" style = "height: 72vh; overflow: auto;">
           {#each todo_arr as task, i (i)}
             <Task task={task.task} isDone={task.isDone} on:delete={handleDelete}></Task>
           {/each}
