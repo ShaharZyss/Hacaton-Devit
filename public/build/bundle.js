@@ -83,6 +83,9 @@ var app = (function () {
             throw new Error(`Function called outside component initialization`);
         return current_component;
     }
+    function onMount(fn) {
+        get_current_component().$$.on_mount.push(fn);
+    }
     function createEventDispatcher() {
         const component = get_current_component();
         return (type, detail) => {
@@ -1181,7 +1184,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:8) {#each events_list as event, i (i)}
+    // (56:6) {#each events_list as event, i (i)}
     function create_each_block$1(key_1, ctx) {
     	let first;
     	let current;
@@ -1230,7 +1233,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(54:8) {#each events_list as event, i (i)}",
+    		source: "(56:6) {#each events_list as event, i (i)}",
     		ctx
     	});
 
@@ -1315,45 +1318,45 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$3, 51, 6, 1268);
+    			add_location(span, file$3, 53, 4, 1212);
     			attr_dev(div0, "class", "card-content");
     			set_style(div0, "height", "20vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$3, 52, 6, 1315);
+    			add_location(div0, file$3, 54, 4, 1257);
     			attr_dev(input0, "id", "add-event");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$3, 61, 10, 1633);
+    			add_location(input0, file$3, 63, 8, 1546);
     			attr_dev(label0, "for", "add-event");
-    			add_location(label0, file$3, 62, 10, 1715);
+    			add_location(label0, file$3, 64, 8, 1627);
     			attr_dev(div1, "class", "input-field inline s12 m3");
-    			add_location(div1, file$3, 60, 8, 1583);
+    			add_location(div1, file$3, 62, 6, 1498);
     			attr_dev(input1, "id", "add-date");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "datepicker");
-    			add_location(input1, file$3, 66, 10, 1826);
+    			add_location(input1, file$3, 68, 8, 1732);
     			attr_dev(label1, "for", "add-date");
-    			add_location(label1, file$3, 67, 10, 1908);
+    			add_location(label1, file$3, 69, 8, 1813);
     			attr_dev(div2, "class", "input-field inline s12 m3");
-    			add_location(div2, file$3, 65, 8, 1776);
+    			add_location(div2, file$3, 67, 6, 1684);
     			attr_dev(input2, "id", "add-time");
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "timepicker");
-    			add_location(input2, file$3, 71, 10, 2017);
+    			add_location(input2, file$3, 73, 8, 1916);
     			attr_dev(label2, "for", "add-time");
-    			add_location(label2, file$3, 72, 10, 2099);
+    			add_location(label2, file$3, 74, 8, 1997);
     			attr_dev(div3, "class", "input-field inline s12 m3");
-    			add_location(div3, file$3, 70, 8, 1967);
+    			add_location(div3, file$3, 72, 6, 1868);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$3, 76, 10, 2208);
+    			add_location(i, file$3, 78, 8, 2100);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$3, 75, 8, 2158);
+    			add_location(a, file$3, 77, 6, 2052);
     			attr_dev(div4, "class", "card-action");
-    			add_location(div4, file$3, 58, 6, 1548);
+    			add_location(div4, file$3, 60, 4, 1465);
     			attr_dev(div5, "class", "card");
-    			add_location(div5, file$3, 50, 4, 1243);
+    			add_location(div5, file$3, 52, 2, 1189);
     			attr_dev(div6, "class", "row");
-    			add_location(div6, file$3, 49, 0, 1221);
+    			add_location(div6, file$3, 51, 0, 1169);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1503,13 +1506,11 @@ var app = (function () {
     		$$invalidate(0, events_list = events_list.filter(s_event => s_event.event !== e.detail.event || s_event.date !== e.detail.date || s_event.time != e.detail.time));
     	};
 
-    	// initialize
-    	document.addEventListener("DOMContentLoaded", function () {
+    	onMount(() => {
+    		// initialize
     		var elems = document.querySelectorAll(".datepicker");
-    		var instances = M.Datepicker.init(elems, { format: "dd/mm/yyyy" });
-    	});
 
-    	document.addEventListener("DOMContentLoaded", function () {
+    		var instances = M.Datepicker.init(elems, { format: "dd/mm/yyyy" });
     		var elems = document.querySelectorAll(".timepicker");
     		var instances = M.Timepicker.init(elems, { defaultTime: "now" });
     	});
@@ -1540,6 +1541,7 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		SchedEvent: ScheduledEvent,
+    		onMount,
     		events_list,
     		newEvent,
     		newDate,
@@ -1593,7 +1595,6 @@ var app = (function () {
     }
 
     /* src/components/TeamUpdatesComponents/Update.svelte generated by Svelte v3.23.1 */
-
     const file$4 = "src/components/TeamUpdatesComponents/Update.svelte";
 
     function create_fragment$4(ctx) {
@@ -1622,13 +1623,13 @@ var app = (function () {
     			span = element("span");
     			t4 = text(t4_value);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$4, 11, 4, 263);
+    			add_location(i, file$4, 12, 4, 256);
     			attr_dev(div0, "class", "collapsible-header");
-    			add_location(div0, file$4, 10, 2, 226);
-    			add_location(span, file$4, 15, 4, 382);
+    			add_location(div0, file$4, 11, 2, 219);
+    			add_location(span, file$4, 16, 4, 375);
     			attr_dev(div1, "class", "collapsible-body");
-    			add_location(div1, file$4, 14, 2, 347);
-    			add_location(li, file$4, 9, 0, 219);
+    			add_location(div1, file$4, 15, 2, 340);
+    			add_location(li, file$4, 10, 0, 212);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1669,7 +1670,7 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let { update } = $$props;
 
-    	document.addEventListener("DOMContentLoaded", function () {
+    	onMount(() => {
     		var elems = document.querySelectorAll(".collapsible");
     		var instances = M.Collapsible.init(elems, {});
     	});
@@ -1687,7 +1688,7 @@ var app = (function () {
     		if ("update" in $$props) $$invalidate(0, update = $$props.update);
     	};
 
-    	$$self.$capture_state = () => ({ update });
+    	$$self.$capture_state = () => ({ onMount, update });
 
     	$$self.$inject_state = $$props => {
     		if ("update" in $$props) $$invalidate(0, update = $$props.update);
@@ -2157,7 +2158,6 @@ var app = (function () {
     }
 
     /* src/components/News/Update.svelte generated by Svelte v3.23.1 */
-
     const file$6 = "src/components/News/Update.svelte";
 
     function create_fragment$6(ctx) {
@@ -2186,13 +2186,13 @@ var app = (function () {
     			span = element("span");
     			t4 = text(t4_value);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$6, 11, 4, 263);
+    			add_location(i, file$6, 12, 4, 256);
     			attr_dev(div0, "class", "collapsible-header");
-    			add_location(div0, file$6, 10, 2, 226);
-    			add_location(span, file$6, 15, 4, 382);
+    			add_location(div0, file$6, 11, 2, 219);
+    			add_location(span, file$6, 16, 4, 375);
     			attr_dev(div1, "class", "collapsible-body");
-    			add_location(div1, file$6, 14, 2, 347);
-    			add_location(li, file$6, 9, 0, 219);
+    			add_location(div1, file$6, 15, 2, 340);
+    			add_location(li, file$6, 10, 0, 212);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2233,7 +2233,7 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { update } = $$props;
 
-    	document.addEventListener("DOMContentLoaded", function () {
+    	onMount(() => {
     		var elems = document.querySelectorAll(".collapsible");
     		var instances = M.Collapsible.init(elems, {});
     	});
@@ -2251,7 +2251,7 @@ var app = (function () {
     		if ("update" in $$props) $$invalidate(0, update = $$props.update);
     	};
 
-    	$$self.$capture_state = () => ({ update });
+    	$$self.$capture_state = () => ({ onMount, update });
 
     	$$self.$inject_state = $$props => {
     		if ("update" in $$props) $$invalidate(0, update = $$props.update);
@@ -2393,26 +2393,26 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			i.textContent = "add";
-    			attr_dev(input0, "id", "add-update-Title");
+    			attr_dev(input0, "id", "add-news-Title");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
     			add_location(input0, file$7, 40, 10, 968);
-    			attr_dev(label0, "for", "add-update-Title");
-    			add_location(label0, file$7, 45, 10, 1115);
+    			attr_dev(label0, "for", "add-news-Title");
+    			add_location(label0, file$7, 45, 10, 1113);
     			attr_dev(div0, "class", "input-field inline s12 m5");
     			add_location(div0, file$7, 39, 8, 918);
-    			attr_dev(input1, "id", "add-update-Msg");
+    			attr_dev(input1, "id", "add-news-Msg");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "validate");
-    			add_location(input1, file$7, 49, 10, 1240);
-    			attr_dev(label1, "for", "add-update-Msg");
-    			add_location(label1, file$7, 54, 10, 1383);
+    			add_location(input1, file$7, 49, 10, 1236);
+    			attr_dev(label1, "for", "add-news-Msg");
+    			add_location(label1, file$7, 54, 10, 1377);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$7, 48, 8, 1190);
+    			add_location(div1, file$7, 48, 8, 1186);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$7, 58, 10, 1508);
+    			add_location(i, file$7, 58, 10, 1500);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$7, 57, 8, 1458);
+    			add_location(a, file$7, 57, 8, 1450);
     			attr_dev(div2, "class", "card-action");
     			add_location(div2, file$7, 38, 6, 884);
     		},

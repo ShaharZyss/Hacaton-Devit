@@ -39,20 +39,20 @@
       <div class="card-action">
         <div class="input-field inline s12 m5">
           <input
-            id="add-update-Title"
+            id="add-news-Title"
             type="text"
             class="validate"
             bind:value={newUpdateTitle} />
-          <label for="add-update-Title">Update Title</label>
+          <label for="add-news-Title">Update Title</label>
         </div>
 
         <div class="input-field inline s12 m5">
           <input
-            id="add-update-Msg"
+            id="add-news-Msg"
             type="text"
             class="validate"
             bind:value={newUpdateMsg} />
-          <label for="add-update-Msg">Update Message</label>
+          <label for="add-news-Msg">Update Message</label>
         </div>
 
         <a href="#!" on:click={handleAddition}>

@@ -1,7 +1,8 @@
 <script>
+  import { onMount } from "svelte";
   export let update;
 
-  document.addEventListener("DOMContentLoaded", function() {
+  onMount(() => {
     var elems = document.querySelectorAll(".collapsible");
     var instances = M.Collapsible.init(elems, {});
   });
