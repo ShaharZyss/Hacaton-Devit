@@ -14,13 +14,16 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
+let n;
 const db = firebase.firestore();
 
-export function getDocs() {
-  db.collection('users').where('name', '==', 'mario').get().then((snapshot) => {
+export async function getAccessLevel(name, password) {
+  
+  await db.collection('users').where('name', '==', name).where('password', '==', password).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
-      console.log(doc.data());
+      n = doc.data().accessLevel;
     })
   });
+
+  return n
 }

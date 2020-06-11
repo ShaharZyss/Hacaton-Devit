@@ -822,7 +822,7 @@ var app = (function () {
     			attr_dev(span, "class", "card-title");
     			add_location(span, file$1, 25, 8, 570);
     			attr_dev(div0, "class", "card-content");
-    			set_style(div0, "height", "20vh");
+    			set_style(div0, "height", "60vh");
     			set_style(div0, "overflow", "auto");
     			add_location(div0, file$1, 26, 8, 621);
     			attr_dev(input, "id", "add-task");
@@ -1832,25 +1832,25 @@ var app = (function () {
     			attr_dev(input0, "id", "add-update-Title");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$5, 40, 10, 986);
+    			add_location(input0, file$5, 40, 10, 974);
     			attr_dev(label0, "for", "add-update-Title");
-    			add_location(label0, file$5, 45, 10, 1133);
+    			add_location(label0, file$5, 45, 10, 1121);
     			attr_dev(div0, "class", "input-field inline s12 m5");
-    			add_location(div0, file$5, 39, 8, 936);
+    			add_location(div0, file$5, 39, 8, 924);
     			attr_dev(input1, "id", "add-update-Msg");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "validate");
-    			add_location(input1, file$5, 49, 10, 1258);
+    			add_location(input1, file$5, 49, 10, 1246);
     			attr_dev(label1, "for", "add-update-Msg");
-    			add_location(label1, file$5, 54, 10, 1401);
+    			add_location(label1, file$5, 54, 10, 1389);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$5, 48, 8, 1208);
+    			add_location(div1, file$5, 48, 8, 1196);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$5, 58, 10, 1526);
+    			add_location(i, file$5, 58, 10, 1514);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$5, 57, 8, 1476);
+    			add_location(a, file$5, 57, 8, 1464);
     			attr_dev(div2, "class", "card-action");
-    			add_location(div2, file$5, 38, 6, 902);
+    			add_location(div2, file$5, 38, 6, 890);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -1947,17 +1947,17 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$5, 27, 4, 590);
+    			add_location(span, file$5, 27, 4, 578);
     			attr_dev(ul, "class", "collapsible popout");
-    			add_location(ul, file$5, 30, 6, 718);
+    			add_location(ul, file$5, 30, 6, 706);
     			attr_dev(div0, "class", "card-content box");
     			set_style(div0, "height", "20vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$5, 29, 4, 640);
+    			add_location(div0, file$5, 29, 4, 628);
     			attr_dev(div1, "class", "card");
-    			add_location(div1, file$5, 26, 2, 567);
+    			add_location(div1, file$5, 26, 2, 555);
     			attr_dev(div2, "class", "row");
-    			add_location(div2, file$5, 25, 0, 547);
+    			add_location(div2, file$5, 25, 0, 535);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2040,7 +2040,7 @@ var app = (function () {
     }
 
     function instance$5($$self, $$props, $$invalidate) {
-    	let { accessLevel = "manager" } = $$props;
+    	let { accessLevel } = $$props;
 
     	let Updates = [
     		{
@@ -2138,6 +2138,13 @@ var app = (function () {
     			options,
     			id: create_fragment$5.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*accessLevel*/ ctx[0] === undefined && !("accessLevel" in props)) {
+    			console.warn("<TeamUpdate> was created without expected prop 'accessLevel'");
+    		}
     	}
 
     	get accessLevel() {
@@ -2166,8 +2173,16 @@ var app = (function () {
     	let current;
     	const todolst = new TODO_Lst({ $$inline: true });
     	const schedule = new Schedule({ $$inline: true });
-    	const teamupdates0 = new TeamUpdate({ $$inline: true });
-    	const teamupdates1 = new TeamUpdate({ $$inline: true });
+
+    	const teamupdates0 = new TeamUpdate({
+    			props: { accessLevel: /*accessLevel*/ ctx[1] },
+    			$$inline: true
+    		});
+
+    	const teamupdates1 = new TeamUpdate({
+    			props: { accessLevel: /*accessLevel*/ ctx[1] },
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
@@ -2185,20 +2200,22 @@ var app = (function () {
     			t2 = space();
     			div3 = element("div");
     			create_component(teamupdates1.$$.fragment);
-    			attr_dev(div0, "class", "toDoList svelte-14qmuop");
-    			add_location(div0, file$6, 8, 4, 256);
-    			attr_dev(div1, "class", "schedule svelte-14qmuop");
-    			add_location(div1, file$6, 13, 8, 352);
-    			attr_dev(div2, "class", "update svelte-14qmuop");
-    			add_location(div2, file$6, 18, 12, 466);
-    			attr_dev(div3, "class", "News svelte-14qmuop");
-    			add_location(div3, file$6, 22, 12, 554);
-    			attr_dev(div4, "class", "innerBlock svelte-14qmuop");
-    			add_location(div4, file$6, 17, 8, 427);
-    			attr_dev(div5, "class", "MainBlock svelte-14qmuop");
-    			add_location(div5, file$6, 12, 4, 318);
-    			attr_dev(div6, "class", "container svelte-14qmuop");
-    			add_location(div6, file$6, 7, 0, 226);
+    			attr_dev(div0, "class", "toDoList svelte-9ldfzt");
+    			add_location(div0, file$6, 64, 2, 959);
+    			attr_dev(div1, "class", "schedule svelte-9ldfzt");
+    			add_location(div1, file$6, 69, 4, 1038);
+    			attr_dev(div2, "class", "update svelte-9ldfzt");
+    			add_location(div2, file$6, 74, 6, 1127);
+    			attr_dev(div3, "class", "News svelte-9ldfzt");
+    			add_location(div3, file$6, 78, 6, 1205);
+    			attr_dev(div4, "class", "innerBlock svelte-9ldfzt");
+    			add_location(div4, file$6, 73, 4, 1096);
+    			attr_dev(div5, "class", "MainBlock svelte-9ldfzt");
+    			add_location(div5, file$6, 68, 2, 1010);
+    			attr_dev(div6, "class", "container svelte-9ldfzt");
+    			toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
+    			toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
+    			add_location(div6, file$6, 63, 0, 881);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2220,7 +2237,22 @@ var app = (function () {
     			mount_component(teamupdates1, div3, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const teamupdates0_changes = {};
+    			if (dirty & /*accessLevel*/ 2) teamupdates0_changes.accessLevel = /*accessLevel*/ ctx[1];
+    			teamupdates0.$set(teamupdates0_changes);
+    			const teamupdates1_changes = {};
+    			if (dirty & /*accessLevel*/ 2) teamupdates1_changes.accessLevel = /*accessLevel*/ ctx[1];
+    			teamupdates1.$set(teamupdates1_changes);
+
+    			if (dirty & /*IsEnabled*/ 1) {
+    				toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
+    			}
+
+    			if (dirty & /*IsEnabled*/ 1) {
+    				toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
+    			}
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(todolst.$$.fragment, local);
@@ -2257,7 +2289,9 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	const writable_props = [];
+    	let { IsEnabled } = $$props;
+    	let { accessLevel } = $$props;
+    	const writable_props = ["IsEnabled", "accessLevel"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<LandingPage> was created with unknown prop '${key}'`);
@@ -2265,14 +2299,36 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("LandingPage", $$slots, []);
-    	$$self.$capture_state = () => ({ ToDoLst: TODO_Lst, Schedule, TeamUpdates: TeamUpdate });
-    	return [];
+
+    	$$self.$set = $$props => {
+    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
+    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		ToDoLst: TODO_Lst,
+    		Schedule,
+    		TeamUpdates: TeamUpdate,
+    		IsEnabled,
+    		accessLevel
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
+    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [IsEnabled, accessLevel];
     }
 
     class LandingPage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { IsEnabled: 0, accessLevel: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2280,6 +2336,286 @@ var app = (function () {
     			options,
     			id: create_fragment$6.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*IsEnabled*/ ctx[0] === undefined && !("IsEnabled" in props)) {
+    			console.warn("<LandingPage> was created without expected prop 'IsEnabled'");
+    		}
+
+    		if (/*accessLevel*/ ctx[1] === undefined && !("accessLevel" in props)) {
+    			console.warn("<LandingPage> was created without expected prop 'accessLevel'");
+    		}
+    	}
+
+    	get IsEnabled() {
+    		throw new Error("<LandingPage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set IsEnabled(value) {
+    		throw new Error("<LandingPage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get accessLevel() {
+    		throw new Error("<LandingPage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set accessLevel(value) {
+    		throw new Error("<LandingPage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/pages/loginPage.svelte generated by Svelte v3.23.1 */
+    const file$7 = "src/components/pages/loginPage.svelte";
+
+    function create_fragment$7(ctx) {
+    	let div6;
+    	let div5;
+    	let div4;
+    	let div2;
+    	let span;
+    	let t1;
+    	let div0;
+    	let input0;
+    	let t2;
+    	let label0;
+    	let t4;
+    	let div1;
+    	let input1;
+    	let t5;
+    	let label1;
+    	let t7;
+    	let div3;
+    	let button;
+    	let i;
+    	let t9;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div6 = element("div");
+    			div5 = element("div");
+    			div4 = element("div");
+    			div2 = element("div");
+    			span = element("span");
+    			span.textContent = "Login";
+    			t1 = space();
+    			div0 = element("div");
+    			input0 = element("input");
+    			t2 = space();
+    			label0 = element("label");
+    			label0.textContent = "Name";
+    			t4 = space();
+    			div1 = element("div");
+    			input1 = element("input");
+    			t5 = space();
+    			label1 = element("label");
+    			label1.textContent = "Password";
+    			t7 = space();
+    			div3 = element("div");
+    			button = element("button");
+    			i = element("i");
+    			i.textContent = "login";
+    			t9 = text("\n          Login");
+    			attr_dev(span, "class", "card-title");
+    			add_location(span, file$7, 30, 8, 540);
+    			attr_dev(input0, "id", "get-name");
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "class", "validate");
+    			add_location(input0, file$7, 32, 10, 636);
+    			attr_dev(label0, "for", "get-name");
+    			add_location(label0, file$7, 33, 10, 717);
+    			attr_dev(div0, "class", "input-field inline s12 m3");
+    			add_location(div0, file$7, 31, 8, 586);
+    			attr_dev(input1, "id", "get-password");
+    			attr_dev(input1, "type", "text");
+    			attr_dev(input1, "class", "validate");
+    			add_location(input1, file$7, 37, 10, 826);
+    			attr_dev(label1, "for", "get-password");
+    			add_location(label1, file$7, 42, 10, 963);
+    			attr_dev(div1, "class", "input-field inline s12 m3");
+    			add_location(div1, file$7, 36, 8, 776);
+    			attr_dev(div2, "class", "card-content");
+    			add_location(div2, file$7, 29, 6, 505);
+    			attr_dev(i, "class", "material-icons left");
+    			add_location(i, file$7, 47, 10, 1153);
+    			attr_dev(button, "class", "waves-effect waves-light btn");
+    			add_location(button, file$7, 46, 8, 1074);
+    			attr_dev(div3, "class", "card-action");
+    			add_location(div3, file$7, 45, 6, 1040);
+    			attr_dev(div4, "class", "card");
+    			add_location(div4, file$7, 28, 4, 480);
+    			attr_dev(div5, "class", "col s12 m6");
+    			add_location(div5, file$7, 27, 2, 451);
+    			attr_dev(div6, "class", "row svelte-1vhbusj");
+    			toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
+    			toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
+    			add_location(div6, file$7, 26, 0, 379);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, div2);
+    			append_dev(div2, span);
+    			append_dev(div2, t1);
+    			append_dev(div2, div0);
+    			append_dev(div0, input0);
+    			set_input_value(input0, /*name*/ ctx[1]);
+    			append_dev(div0, t2);
+    			append_dev(div0, label0);
+    			append_dev(div2, t4);
+    			append_dev(div2, div1);
+    			append_dev(div1, input1);
+    			set_input_value(input1, /*password*/ ctx[2]);
+    			append_dev(div1, t5);
+    			append_dev(div1, label1);
+    			append_dev(div4, t7);
+    			append_dev(div4, div3);
+    			append_dev(div3, button);
+    			append_dev(button, i);
+    			append_dev(button, t9);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
+    					listen_dev(button, "click", /*handleLogin*/ ctx[3], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*name*/ 2 && input0.value !== /*name*/ ctx[1]) {
+    				set_input_value(input0, /*name*/ ctx[1]);
+    			}
+
+    			if (dirty & /*password*/ 4 && input1.value !== /*password*/ ctx[2]) {
+    				set_input_value(input1, /*password*/ ctx[2]);
+    			}
+
+    			if (dirty & /*IsEnabled*/ 1) {
+    				toggle_class(div6, "disable", !/*IsEnabled*/ ctx[0]);
+    			}
+
+    			if (dirty & /*IsEnabled*/ 1) {
+    				toggle_class(div6, "enable", /*IsEnabled*/ ctx[0]);
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div6);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$7.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	const dispatch = createEventDispatcher();
+    	let name = "";
+    	let password = "";
+    	let { IsEnabled } = $$props;
+
+    	const handleLogin = () => {
+    		dispatch("login", { name, password });
+    	};
+
+    	const writable_props = ["IsEnabled"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<LoginPage> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("LoginPage", $$slots, []);
+
+    	function input0_input_handler() {
+    		name = this.value;
+    		$$invalidate(1, name);
+    	}
+
+    	function input1_input_handler() {
+    		password = this.value;
+    		$$invalidate(2, password);
+    	}
+
+    	$$self.$set = $$props => {
+    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		createEventDispatcher,
+    		dispatch,
+    		name,
+    		password,
+    		IsEnabled,
+    		handleLogin
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("name" in $$props) $$invalidate(1, name = $$props.name);
+    		if ("password" in $$props) $$invalidate(2, password = $$props.password);
+    		if ("IsEnabled" in $$props) $$invalidate(0, IsEnabled = $$props.IsEnabled);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		IsEnabled,
+    		name,
+    		password,
+    		handleLogin,
+    		input0_input_handler,
+    		input1_input_handler
+    	];
+    }
+
+    class LoginPage extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { IsEnabled: 0 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "LoginPage",
+    			options,
+    			id: create_fragment$7.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*IsEnabled*/ ctx[0] === undefined && !("IsEnabled" in props)) {
+    			console.warn("<LoginPage> was created without expected prop 'IsEnabled'");
+    		}
+    	}
+
+    	get IsEnabled() {
+    		throw new Error("<LoginPage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set IsEnabled(value) {
+    		throw new Error("<LoginPage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -24329,32 +24665,52 @@ var app = (function () {
     };
 
     index_cjs$3.initializeApp(firebaseConfig);
-
+    let n$1;
     const db$1 = index_cjs$3.firestore();
 
-    function getDocs() {
-      db$1.collection('users').where('name', '==', 'mario').get().then((snapshot) => {
+    async function getAccessLevel(name, password) {
+      
+      await db$1.collection('users').where('name', '==', name).where('password', '==', password).get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
-          console.log(doc.data());
+          n$1 = doc.data().accessLevel;
         });
       });
+
+      return n$1
     }
 
     /* src/App.svelte generated by Svelte v3.23.1 */
-    const file$7 = "src/App.svelte";
+    const file$8 = "src/App.svelte";
 
-    // (12:4) {#if page == 0}
+    // (23:4) {#if acl != 'waiting'}
     function create_if_block$1(ctx) {
+    	let div;
     	let current;
-    	const landingpage = new LandingPage({ $$inline: true });
+
+    	const landingpage = new LandingPage({
+    			props: {
+    				accessLevel: /*acl*/ ctx[0],
+    				IsEnabled: !/*displayLogin*/ ctx[1]
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
+    			div = element("div");
     			create_component(landingpage.$$.fragment);
+    			add_location(div, file$8, 23, 6, 605);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(landingpage, target, anchor);
+    			insert_dev(target, div, anchor);
+    			mount_component(landingpage, div, null);
     			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const landingpage_changes = {};
+    			if (dirty & /*acl*/ 1) landingpage_changes.accessLevel = /*acl*/ ctx[0];
+    			if (dirty & /*displayLogin*/ 2) landingpage_changes.IsEnabled = !/*displayLogin*/ ctx[1];
+    			landingpage.$set(landingpage_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -24366,7 +24722,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(landingpage, detaching);
+    			if (detaching) detach_dev(div);
+    			destroy_component(landingpage);
     		}
     	};
 
@@ -24374,26 +24731,36 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(12:4) {#if page == 0}",
+    		source: "(23:4) {#if acl != 'waiting'}",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$7(ctx) {
+    function create_fragment$8(ctx) {
     	let main;
     	let div;
+    	let t;
     	let current;
-    	let if_block = /*page*/ ctx[0] == 0 && create_if_block$1(ctx);
+
+    	const loginpage = new LoginPage({
+    			props: { IsEnabled: /*displayLogin*/ ctx[1] },
+    			$$inline: true
+    		});
+
+    	loginpage.$on("login", /*checkIfUserExists*/ ctx[2]);
+    	let if_block = /*acl*/ ctx[0] != "waiting" && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
     			main = element("main");
     			div = element("div");
+    			create_component(loginpage.$$.fragment);
+    			t = space();
     			if (if_block) if_block.c();
-    			add_location(div, file$7, 10, 2, 182);
-    			add_location(main, file$7, 9, 0, 173);
+    			add_location(div, file$8, 20, 2, 494);
+    			add_location(main, file$8, 18, 0, 484);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24401,28 +24768,60 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
+    			mount_component(loginpage, div, null);
+    			append_dev(div, t);
     			if (if_block) if_block.m(div, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const loginpage_changes = {};
+    			if (dirty & /*displayLogin*/ 2) loginpage_changes.IsEnabled = /*displayLogin*/ ctx[1];
+    			loginpage.$set(loginpage_changes);
+
+    			if (/*acl*/ ctx[0] != "waiting") {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+
+    					if (dirty & /*acl*/ 1) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block$1(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(div, null);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
+    			}
+    		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(loginpage.$$.fragment, local);
     			transition_in(if_block);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(loginpage.$$.fragment, local);
     			transition_out(if_block);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+    			destroy_component(loginpage);
     			if (if_block) if_block.d();
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$7.name,
+    		id: create_fragment$8.name,
     		type: "component",
     		source: "",
     		ctx
@@ -24431,9 +24830,20 @@ var app = (function () {
     	return block;
     }
 
-    function instance$7($$self, $$props, $$invalidate) {
-    	getDocs();
-    	let page = 0;
+    function instance$8($$self, $$props, $$invalidate) {
+    	let acl = "waiting";
+    	let displayLogin = true;
+
+    	const checkIfUserExists = e => {
+    		getAccessLevel(e.detail.name, e.detail.password).then(data => {
+    			$$invalidate(0, acl = data);
+
+    			if (acl != "waiting" && acl != undefined) {
+    				$$invalidate(1, displayLogin = false);
+    			}
+    		});
+    	};
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -24442,29 +24852,38 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	$$self.$capture_state = () => ({ LandingPage, getDocs, page });
+
+    	$$self.$capture_state = () => ({
+    		LandingPage,
+    		LoginPage,
+    		getAccessLevel,
+    		acl,
+    		displayLogin,
+    		checkIfUserExists
+    	});
 
     	$$self.$inject_state = $$props => {
-    		if ("page" in $$props) $$invalidate(0, page = $$props.page);
+    		if ("acl" in $$props) $$invalidate(0, acl = $$props.acl);
+    		if ("displayLogin" in $$props) $$invalidate(1, displayLogin = $$props.displayLogin);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [page];
+    	return [acl, displayLogin, checkIfUserExists];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$7.name
+    			id: create_fragment$8.name
     		});
     	}
     }

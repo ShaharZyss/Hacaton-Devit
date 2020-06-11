@@ -1,7 +1,7 @@
 <script>
   import Update from "./Update.svelte";
 
-  export let accessLevel = "manager";
+  export let accessLevel;
   
   let Updates = [
     { updateTitle: "update1", updateMsg: "bli blu bla" },

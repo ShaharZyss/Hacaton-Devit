@@ -1,77 +1,85 @@
 <script>
-    import ToDoLst from '../TODOLISTComponents/TODO_Lst.svelte';
-    import Schedule from '../scheduleComponents/Schedule.svelte';
-    import TeamUpdates from '../TeamUpdatesComponents/TeamUpdate.svelte';
+  import ToDoLst from "../TODOLISTComponents/TODO_Lst.svelte";
+  import Schedule from "../scheduleComponents/Schedule.svelte";
+  import TeamUpdates from "../TeamUpdatesComponents/TeamUpdate.svelte";
+
+  export let IsEnabled;
+  export let accessLevel;
+
 </script>
 
+<style>
+  .container {
+    padding: 0;
+    margin: 8px;
+    display: flex;
+    width: 95%;
+    max-width: none;
+  }
 
-<div class = "container">
-    <div class = "toDoList">
-        <ToDoLst /> 
+  .toDoList {
+    flex: 15;
+    margin: 8px;
+  }
+
+  .MainBlock {
+    margin: 8px;
+    flex: 25;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .innerBlock {
+    margin: 8px;
+    flex: 25;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .schedule {
+    flex: 25;
+  }
+
+  .update {
+    flex: 25;
+    margin: 8px;
+    margin-top: 0;
+  }
+
+  .News {
+    flex: 25;
+    margin: 15px;
+    margin-top: 0;
+  }
+
+  .disable {
+    display: none;
+  }
+
+  .enable {
+    display: block;
+  }
+</style>
+
+<div class="container" class:disable={!IsEnabled} class:enable={IsEnabled}>
+  <div class="toDoList">
+    <ToDoLst />
+  </div>
+
+  <div class="MainBlock">
+    <div class="schedule">
+      <Schedule />
     </div>
 
-    <div class = "MainBlock">
-        <div class = "schedule">
-            <Schedule /> 
-        </div>
+    <div class="innerBlock">
+      <div class="update">
+        <TeamUpdates {accessLevel}/>
+      </div>
 
-        <div class = "innerBlock">
-            <div class = "update">
-                <TeamUpdates /> 
-            </div>
-
-            <div class = "News">
-                <TeamUpdates /> 
-            </div>
-        </div>
+      <div class="News">
+        <TeamUpdates {accessLevel}/>
+      </div>
     </div>
+  </div>
 
 </div>
-
-<style>
-    .container{
-        padding: 0;
-        margin: 8px;
-        display: flex;
-        width: 95%;
-        max-width: none;
-    }
-
-    .toDoList{
-        flex: 15;
-        margin: 8px;
-    }
-
-    .MainBlock{
-        margin: 8px;
-        flex: 25;
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .innerBlock{
-        margin: 8px;
-        flex: 25;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .schedule{
-        flex: 25;
-    }
-
-
-    .update{
-        flex:25;
-        margin: 8px;
-        margin-top: 0;
-        
-    }
-
-    .News{
-        flex: 25;
-        margin: 15px;
-        margin-top: 0;
-    }
-</style>

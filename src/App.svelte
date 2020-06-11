@@ -1,16 +1,30 @@
 <script>
   import LandingPage from "./components/pages/LandingPage.svelte";
-  import { getDocs } from "./API/firebaseSettings.js";
+  import LoginPage from "./components/pages/loginPage.svelte";
+  import { getAccessLevel } from "./API/firebaseSettings.js";
 
-  getDocs();
+  let acl = "waiting";
+  let displayLogin = true;
 
-  let page = 0;
+  const checkIfUserExists = e => {
+    getAccessLevel(e.detail.name, e.detail.password).then(data => {
+      acl = data;
+      if(acl != "waiting" && acl != undefined){
+        displayLogin = false;
+      }
+    });
+  };
 </script>
 
 <main>
+
   <div>
-    {#if page == 0}
-      <LandingPage />
+    <LoginPage IsEnabled={displayLogin} on:login={checkIfUserExists} />
+    {#if acl != 'waiting'}
+      <div>
+        <LandingPage accessLevel={acl} IsEnabled={!displayLogin}/>
+      </div>
     {/if}
   </div>
+
 </main>
