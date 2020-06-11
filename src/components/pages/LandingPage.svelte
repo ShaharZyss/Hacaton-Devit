@@ -1,7 +1,7 @@
 <script>
     import ToDoLst from '../TODOLISTComponents/TODO_Lst.svelte';
     import Schedule from '../scheduleComponents/Schedule.svelte';
-    import TeamUpdate from '../TeamUpdatesComponents/TeamUpdate.svelte';
+    import TeamUpdates from '../TeamUpdatesComponents/TeamUpdate.svelte';
 </script>
 
 
@@ -17,17 +17,16 @@
 
         <div class = "innerBlock">
             <div class = "update">
-                <TeamUpdate /> 
+                <TeamUpdates /> 
             </div>
 
             <div class = "News">
-                <TeamUpdate /> 
+                <TeamUpdates /> 
             </div>
         </div>
     </div>
 
 </div>
-
 
 <style>
     .container{

@@ -28,7 +28,7 @@
     <span class="card-title">Team Updates</span>
 
     <div class="card-content box"  style = "height: 20vh; overflow: auto;">
-      <ul class="collapsible">
+      <ul class="collapsible popout">
         {#each Updates as update, i (i)}
           <Update {update} />
         {/each}

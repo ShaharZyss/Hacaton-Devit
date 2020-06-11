@@ -1,46 +1,41 @@
 <script>
-  
 	import Task from './Task.svelte'
-  import axios from 'axios'
-  let taskTitle = "";
-  let todo_arr = [  ];
+
+  let todo_arr = [
+    {task: "try 1 5 6 7 ", isDone: false},
+    {task: "try 2", isDone: true},
+    {task: "try 3", isDone: true},
+    {task: "try 4", isDone: false}
+  ];
+
+  let newTask = "";
 
   const handleDelete = e => {
-    todo_arr = todo_arr.filter(todo => todo.id !== e.detail.id)
+    todo_arr = todo_arr.filter(todo => todo.isDone !== e.detail.isDone || todo.task !== e.detail.task)
   }
 
   const handleAddition = () => {
-    todo_arr = [...todo_arr, {title: taskTitle, completed: false, id: todo_arr.length + 1}];
-    taskTitle = "";
+    todo_arr = [...todo_arr, {task: newTask, isDone: false}];
   }
-
-
-  axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-    .then(res => {
-      todo_arr= res.data;
-  });
-
   
 </script>
-<div class = "container" >
-  <div class="row">
+
+<div class="row">
+    <div class="col s12 m11">
       <div class="card">
-        <span class="card-title">task list</span>
-        <div class="card-content" style = "height: 40vh; overflow: auto;">
+        <span class="card-title">Card Title</span>
+        <div class="card-content" style = "height: 20vh; overflow: auto;">
           {#each todo_arr as task, i (i)}
-            <Task {...task} on:delete={handleDelete} />
+            <Task task={task.task} isDone={task.isDone} on:delete={handleDelete}></Task>
           {/each}
         </div>
-
         <div class="card-action">
-        <form on:submit={handleAddition}>
           <div class="input-field inline s12 m5">
-            <input id="add-task" type="text" class="validate" bind:value = {taskTitle}>
+            <input id="add-task" type="text" class="validate" bind:value={newTask}>
             <label for="add-task">Task</label>
           </div>
-          <input type = "submit" class='material-icons green-text' style= "background-color: white; border: none;" value = "add" />
-          </form>
+          <a href="#!" on:click={handleAddition}><i class="material-icons green-text">add</i></a>
         </div>
+      </div>
     </div>
   </div>
-</div>
