@@ -5,12 +5,14 @@
 
   let acl = "waiting";
   let displayLogin = true;
+  let page = "login";
 
   const checkIfUserExists = e => {
     getAccessLevel(e.detail.name, e.detail.password).then(data => {
       acl = data;
       if(acl != "waiting" && acl != undefined){
         displayLogin = false;
+        page = "LandingPage";
       }
     });
   };
@@ -19,8 +21,9 @@
 <main>
 
   <div>
+    {#if page == 'login'}
     <LoginPage on:login={checkIfUserExists} />
-    {#if acl != 'waiting'}
+    {:else if page == "LandingPage"}
       <div>
         <LandingPage accessLevel={acl}/>
       </div>
