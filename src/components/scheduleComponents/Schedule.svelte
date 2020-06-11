@@ -44,6 +44,7 @@
         defaultTime: 'now'
     });
   });
+  
 </script>
 
 <div class="row">
