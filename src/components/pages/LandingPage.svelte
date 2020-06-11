@@ -2,6 +2,7 @@
   import ToDoLst from "../TODOLISTComponents/TODO_Lst.svelte";
   import Schedule from "../scheduleComponents/Schedule.svelte";
   import TeamUpdates from "../TeamUpdatesComponents/TeamUpdate.svelte";
+  import News from "../News/News.svelte";
 
   export let accessLevel;
 
@@ -68,7 +69,7 @@
       </div>
 
       <div class="News">
-        <TeamUpdates {accessLevel}/>
+        <News {accessLevel}/>
       </div>
     </div>
   </div>
