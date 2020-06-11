@@ -20,18 +20,12 @@
   };
 </script>
 
-<style>
-  .done {
-    color: green;
-  }
-</style>
-
 <div class="row inline">
   <div class="col s12 m9">
     <form action="#" class="inline">
-      <label class:done={isDone}>
+      <label style = "text-align: left;">
         <input type="checkbox" bind:checked={isDone} />
-        <span>{task}</span>
+        <span class:done = {isDone}>{task}</span>
       </label>
     </form>
   </div>
@@ -41,3 +35,10 @@
     </a>
   </div>
 </div>
+
+<style>
+  .done{
+    text-decoration: line-through;
+    color: green;
+  }
+</style>

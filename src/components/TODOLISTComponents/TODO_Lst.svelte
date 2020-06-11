@@ -2,10 +2,10 @@
 	import Task from './Task.svelte'
 
   let todo_arr = [
-    {task: "try 1 5 6 7 ", isDone: false},
-    {task: "try 2", isDone: true},
-    {task: "try 3", isDone: true},
-    {task: "try 4", isDone: false}
+    {task: "Finish UI", isDone: true},
+    {task: "Upload to Git", isDone: true},
+    {task: "Prepare Presentation", isDone: true},
+    {task: "Get 100", isDone: false}
   ];
 
   let newTask = "";
@@ -23,8 +23,8 @@
 <div class="row">
     <div class="col s12 m11">
       <div class="card">
-        <span class="card-title">Card Title</span>
-        <div class="card-content" style = "height: 72vh; overflow: auto;">
+        <span class="card-title">To-Do List</span>
+        <div class="card-content" style = "height: 88vh; overflow: auto; margin-right: 0;">
           {#each todo_arr as task, i (i)}
             <Task task={task.task} isDone={task.isDone} on:delete={handleDelete}></Task>
           {/each}

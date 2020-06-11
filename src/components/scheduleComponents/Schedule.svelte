@@ -3,20 +3,26 @@
   import { onMount } from "svelte";
 
   let events_list = [
-    { event: "bla bla", date: "Jun 24, 2020", time: "05:21 PM" },
-    { event: "bla bla", date: "Jun 19, 2020", time: "04:21 AM" },
-    { event: "bla bla", date: "Feb 20, 2020", time: "04:41 PM" }
+    { event: "Creating Presentation", date: "Jun 10, 2020", time: "04:00 PM" },
+    { event: "Product Design Meeting", date: "Jun 9, 2020", time: "9:00 AM" },
+    { event: "Bulding the UI", date: "Jun 11, 2020", time: "8:30 AM" }
   ];
 
   let newEvent = "";
   let newDate = "";
   let newTime = "";
 
+
   const handleAddition = () => {
-    let event = document.getElementById("add-event").value;
-    let date = document.getElementById("add-date").value;
-    let time = document.getElementById("add-time").value;
-    events_list = [...events_list, { event: event, date: date, time: time }];
+    newEvent = document.getElementById("add-event").value;
+    newDate = document.getElementById("add-date").value;
+    newTime = document.getElementById("add-time").value;
+    
+    events_list = [...events_list, { event: newEvent, date: newDate, time: newTime }];
+    
+    newEvent = ""
+    newDate = ""
+    newTime = ""
   };
 
   const handleDelete = e => {
@@ -45,8 +51,8 @@
 </script>
 
 <div class="row">
-  <div class="card">
-    <span class="card-title">SCHEDULE</span>
+  <div class="card" style="">
+    <span class="card-title">Schedule</span>
     <div class="card-content" style="height: 20vh; overflow: auto;">
       {#each events_list as event, i (i)}
         <SchedEvent scheduledEvent={event} on:delete={handleDelete} />
@@ -61,12 +67,12 @@
       </div>
 
       <div class="input-field inline s12 m3">
-        <input id="add-date" type="text" class="datepicker" />
+        <input id="add-date" type="text" class="datepicker"/>
         <label for="add-date">Date</label>
       </div>
 
       <div class="input-field inline s12 m3">
-        <input id="add-time" type="text" class="timepicker" />
+        <input id="add-time" type="text" class="timepicker"/>
         <label for="add-time">Time</label>
       </div>
 

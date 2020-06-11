@@ -2,11 +2,10 @@
   import Update from "./Update.svelte";
 
   export let accessLevel;
-  
+
   let Updates = [
-    { updateTitle: "news", updateMsg: "bli blu bla" },
-    { updateTitle: "news", updateMsg: "bli blu bla" },
-    { updateTitle: "news", updateMsg: "bli blu bla" }
+    { updateTitle: "The pizzas are Here!", updateMsg: "The key to getting a slice is to push, push and push people. They stand in your way!" },
+    { updateTitle: "We finished!", updateMsg: "F*cking finally" }
   ];
 
   let newUpdateTitle = "";
@@ -17,26 +16,26 @@
       ...Updates,
       { updateTitle: newUpdateTitle, updateMsg: newUpdateMsg }
     ];
-    
+
     newUpdateTitle = "";
     newUpdateMsg = "";
   };
 </script>
 
-<div class="row">
-  <div class="card">
-    <span class="card-title">company Updates</span>
 
-    <div class="card-content box"  style = "height: 30vh; overflow: auto;">
-      <ul class="collapsible popout">
-        {#each Updates as update, i (i)}
-          <Update {update} />
-        {/each}
-      </ul>
-    </div>
+<div class="row">
+  <div class="card" style="text-align: center;">
+    <span class="card-title">Company News</span>
 
     {#if accessLevel == 'manager'}
-      <div class="card-action">
+    <div class="card-content box" style="height: 35vh; overflow: auto;">
+      <ul class="collapsible popout">
+        {#each Updates as update, i (i)}
+              <Update {update} />
+            {/each}
+          </ul>
+        </div>
+      <div class="card-action" style="text-align: left;">
         <div class="input-field inline s12 m5">
           <input
             id="add-news-Title"
@@ -59,7 +58,17 @@
           <i class="material-icons green-text">add</i>
         </a>
       </div>
-    {/if}
+
+    {:else}    
+        <div class="card-content box"  style = "height: 53vh; overflow: auto;">
+          <ul class="collapsible popout">
+            {#each Updates as update, i (i)}
+              <Update {update} />
+            {/each}
+          </ul>
+        </div>
+        {/if}
+
   </div>
 </div>
 

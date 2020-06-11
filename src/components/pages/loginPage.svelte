@@ -14,8 +14,7 @@
 </script>
 
 <div class="row">
-  <div class="col s12 m6">
-    <div class="card">
+    <div class="card" style = "margin: 10px 30%">
       <div class="card-content">
         <span class="card-title">Login</span>
         <div class="input-field inline s12 m3">
@@ -41,5 +40,4 @@
         </button>
       </div>
     </div>
-  </div>
 </div>

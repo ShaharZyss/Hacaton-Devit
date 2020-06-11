@@ -3,7 +3,7 @@
   import Schedule from "../scheduleComponents/Schedule.svelte";
   import TeamUpdates from "../TeamUpdatesComponents/TeamUpdate.svelte";
   import News from "../News/News.svelte";
-
+  import Footer from "../Layout/Footer.svelte";
   export let accessLevel;
 
 </script>
@@ -75,3 +75,5 @@
   </div>
 
 </div>
+
+<Footer/>
