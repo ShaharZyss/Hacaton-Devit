@@ -1,9 +1,10 @@
 <script>
   import Update from "./Update.svelte";
+  
 
   export let accessLevel;
   
-  let Updates = [
+  export let Updates = [
     { updateTitle: "Change of Idea", updateMsg: "We changed our idea (for the 3rd time) to the employee manager app." },
     { updateTitle: "Git is Ready!", updateMsg: "Zyss finished preparing the Git." },
     { updateTitle: "UI Ready", updateMsg: "The final (beta) UI is ready for use." }
@@ -17,17 +18,21 @@
       ...Updates,
       { updateTitle: newUpdateTitle, updateMsg: newUpdateMsg }
     ];
-    
+
     newUpdateTitle = "";
     newUpdateMsg = "";
   };
 </script>
 
+<style>
+
+</style>
+
 <div class="row">
   <div class="card">
     <span class="card-title">Team Updates</span>
 
-    <div class="card-content box"  style = "height: 53vh; overflow: auto;">
+    <div class="card-content box"  style = "height: 30vh; overflow: auto;">
       <ul class="collapsible popout">
         {#each Updates as update, i (i)}
           <Update {update} />
@@ -64,6 +69,3 @@
     {/if}
   </div>
 </div>
-
-<style>
-</style>

@@ -1,18 +1,22 @@
 <script>
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
-  
-  export let scheduledEvent;
+
+  export let id;
+  export let event;
+  export let date;
+  export let time;
 
   const handleDelete = () => {
-      dispatch("delete", scheduledEvent)
+    dispatch("delete", { id });
   };
 </script>
 
 <div class="row inline">
   <div class="col s12 m9">
     <p>
-      <b>{scheduledEvent.event}</b> in {scheduledEvent.date}, {scheduledEvent.time}
+      <b>{event}</b>
+      in {date}, {time}
     </p>
   </div>
   <div class="col 12 m1">
