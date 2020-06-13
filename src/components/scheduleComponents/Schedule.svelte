@@ -50,6 +50,15 @@
   });
 </script>
 
+<!-- <style>
+  @media only screen and (max-width: 768px) {
+    .row{
+      margin: 0;
+    }
+
+  }
+</style> -->
+
 <div class="row">
   <div class="card" style="">
     <span class="card-title">Schedule</span>

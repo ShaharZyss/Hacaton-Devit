@@ -20,11 +20,39 @@
   
 </script>
 
+<style>
+
+  .todo{
+    height: 88vh;
+    overflow: auto; 
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .row{
+      margin: 0;
+      width: 100%;
+    }
+
+    .col.s12{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    
+    .todo{
+      height: 40vh;
+    }
+
+  }
+</style>
+
+
 <div class="row">
-    <div class="col s12 m11">
+    <div class="col s12">
       <div class="card">
         <span class="card-title">To-Do List</span>
-        <div class="card-content" style = "height: 88vh; overflow: auto; margin-right: 0;">
+        <div class="card-content todo" >
           {#each todo_arr as task, i (i)}
             <Task task={task.task} isDone={task.isDone} on:delete={handleDelete}></Task>
           {/each}

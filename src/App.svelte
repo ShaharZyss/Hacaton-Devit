@@ -5,6 +5,8 @@
   import Header from "./components/Layout/Header.svelte"
   import Footer from "./components/Layout/Footer.svelte"
 
+  const test = true;
+
   let acl = "waiting";
   let displayLogin = true;
   let page = "login";
@@ -18,6 +20,9 @@
       }
     });
   };
+  
+  
+  if(test) page = "LandingPage";
 </script>
 
 <style>

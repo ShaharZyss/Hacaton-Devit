@@ -51,6 +51,38 @@
     margin: 15px;
     margin-top: 0;
   }
+
+  @media only screen and (max-width: 768px) {
+
+    .container {
+      padding: 0;
+      display: inherit;
+      text-align: center;
+    }
+
+    .MainBlock {
+      margin: 4px;
+      display: block;
+      flex-direction: column;
+    }
+
+    .innerBlock {
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .update {
+      margin: 0;
+      margin-right: 1px;
+    }
+
+    .News {
+      margin: 0;
+      margin-left: 1px;
+    }
+  }
+
 </style>
 
 <div class="container">
