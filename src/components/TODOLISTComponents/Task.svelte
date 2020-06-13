@@ -1,5 +1,8 @@
 <script>
+  import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
+  import { db } from "../../API/firebaseHandler";
+
   const dispatch = createEventDispatcher();
 
   export let id;
@@ -10,13 +13,13 @@
     dispatch("delete", { id });
   }
 
-  // function toggleStatus() {
-  //   let newStatus = !isDone;
-  //   dispatch("toggle", {
-  //     id,
-  //     newStatus
-  //   });
-  // }
+  onMount(() => {
+    document.querySelector("#is-done").addEventListener("change", () => {
+      db.collection("todos")
+        .doc(id)
+        .update({ isDone: isDone });
+    });
+  });
 </script>
 
 <style>
@@ -30,7 +33,7 @@
   <div class="col s12 m9">
     <form action="#" class="inline">
       <label style="text-align: left;">
-        <input type="checkbox" bind:checked={isDone} />
+        <input type="checkbox" id="is-done" bind:checked={isDone} />
         <span class:done={isDone}>{task}</span>
       </label>
     </form>

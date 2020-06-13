@@ -28,13 +28,6 @@
     task = "";
   }
 
-  // function updateStatus(event) {
-  //   const { id, newStatus } = event.detail;
-  //   db.collection("todos")
-  //     .doc(id)
-  //     .update({ complete: newStatus });
-  // }
-
   function removeItem(event) {
     const { id } = event.detail;
     db.collection("todos")
