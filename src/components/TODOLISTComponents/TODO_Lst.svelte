@@ -74,8 +74,8 @@
     <div class="card">
       <span class="card-title">To-Do List</span>
       <div
-        class="card-content"
-        style="height: 88vh; overflow: auto; margin-right: 0;">
+        class="card-content todo"
+        style="height: 70vh; overflow: auto; margin-right: 0;">
         {#each $todos as task}
           <Task {...task} on:delete={removeItem} />
         {/each}
@@ -88,13 +88,6 @@
             class="validate"
             bind:value={task} />
           <label for="add-task">Task</label>
-    <div class="col s12">
-      <div class="card">
-        <span class="card-title">To-Do List</span>
-        <div class="card-content todo" >
-          {#each todo_arr as task, i (i)}
-            <Task task={task.task} isDone={task.isDone} on:delete={handleDelete}></Task>
-          {/each}
         </div>
         <a href="#!" on:click={add}>
           <i class="material-icons green-text">add</i>

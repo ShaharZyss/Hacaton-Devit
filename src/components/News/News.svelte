@@ -28,7 +28,7 @@
     <span class="card-title">Company News</span>
 
     {#if accessLevel == 'manager'}
-    <div class="card-content box" style="height: 35vh; overflow: auto;">
+    <div class="card-content box" style="height: 30vh; overflow: auto;">
       <ul class="collapsible popout">
         {#each Updates as update, i (i)}
               <Update {update} />
@@ -60,7 +60,7 @@
       </div>
 
     {:else}    
-        <div class="card-content box"  style = "height: 53vh; overflow: auto;">
+        <div class="card-content box"  style = "height: 30vh; overflow: auto;">
           <ul class="collapsible popout">
             {#each Updates as update, i (i)}
               <Update {update} />
