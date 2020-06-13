@@ -64,7 +64,6 @@
   }
 
   @media only screen and (max-width: 768px) {
-
     .container {
       padding: 0;
       display: inherit;
@@ -93,7 +92,6 @@
       margin-left: 1px;
     }
   }
-
 </style>
 
 <div class="container">
@@ -112,7 +110,7 @@
       </div>
 
       <div class="News">
-        <News {accessLevel} />
+        <News {uid} />
       </div>
     </div>
   </div>
@@ -126,6 +124,16 @@
         <button class="btn-floating red" on:click={() => auth.signOut()}>
           <i class="material-icons">close</i>
         </button>
+      </li>
+      <li>
+        <a href="https://drive.google.com/drive/" class="btn-floating green accent-3">
+          <i class="material-icons">cloud</i>
+        </a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com/" class="btn-floating green accent-3">
+          <i class="material-icons">code</i>
+        </a>
       </li>
     </ul>
   </div>

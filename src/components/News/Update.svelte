@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  export let update;
+  export let updateTitle;
+  export let updateContent;
 
   onMount(() => {
     var elems = document.querySelectorAll(".collapsible");
@@ -11,9 +12,9 @@
 <li>
   <div class="collapsible-header">
     <i class="material-icons green-text">update</i>
-    {update.updateTitle}
+    {updateTitle}
   </div>
   <div class="collapsible-body">
-    <span>{update.updateMsg}</span>
+    <span>{updateContent}</span>
   </div>
 </li>

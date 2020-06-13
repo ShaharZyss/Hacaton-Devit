@@ -26,6 +26,8 @@
       time
     });
 
+    document.querySelector("#add-event-form").reset();
+
     event = "";
     date = "";
     time = "";
@@ -73,20 +75,22 @@
 
     <div class="card-action">
 
-      <div class="input-field inline s12 m3">
-        <input id="add-event" type="text" class="validate" />
-        <label for="add-event">Event</label>
-      </div>
+      <form id="add-event-form">
+        <div class="input-field inline s12 m3">
+          <input id="add-event" type="text" class="validate" />
+          <label for="add-event">Event</label>
+        </div>
 
-      <div class="input-field inline s12 m3">
-        <input id="add-date" type="text" class="datepicker" />
-        <label for="add-date">Date</label>
-      </div>
+        <div class="input-field inline s12 m3">
+          <input id="add-date" type="text" class="datepicker" />
+          <label for="add-date">Date</label>
+        </div>
 
-      <div class="input-field inline s12 m3">
-        <input id="add-time" type="text" class="timepicker" />
-        <label for="add-time">Time</label>
-      </div>
+        <div class="input-field inline s12 m3">
+          <input id="add-time" type="text" class="timepicker" />
+          <label for="add-time">Time</label>
+        </div>
+      </form>
 
       <a href="#!" on:click={handleAddition}>
         <i class="material-icons green-text">add</i>

@@ -1,76 +1,77 @@
 <script>
   import Update from "./Update.svelte";
+  import { collectionData } from "rxfire/firestore";
+  import { startWith } from "rxjs/operators";
+  import { db } from "../../API/firebaseHandler";
 
-  export let accessLevel;
+  export let uid;
 
-  let Updates = [
-    { updateTitle: "The pizzas are Here!", updateMsg: "The key to getting a slice is to push, push and push people. They stand in your way!" },
-    { updateTitle: "We finished!", updateMsg: "F*cking finally" }
-  ];
+  const query = db.collection("news");
+  const updates = collectionData(query).pipe(startWith([]));
 
-  let newUpdateTitle = "";
-  let newUpdateMsg = "";
+  let updateTitle = "";
+  let updateContent = "";
 
   const handleAddition = () => {
-    Updates = [
-      ...Updates,
-      { updateTitle: newUpdateTitle, updateMsg: newUpdateMsg }
-    ];
+    db.collection("news").add({
+      updateTitle,
+      updateContent
+    });
 
-    newUpdateTitle = "";
-    newUpdateMsg = "";
+    document.querySelector("#add-news-form").reset();
+
+    updateTitle = "";
+    updateContent = "";
   };
 </script>
 
+<style>
+
+</style>
 
 <div class="row">
   <div class="card" style="text-align: center;">
     <span class="card-title">Company News</span>
 
-    {#if accessLevel == 'manager'}
-    <div class="card-content box" style="height: 30vh; overflow: auto;">
-      <ul class="collapsible popout">
-        {#each Updates as update, i (i)}
-              <Update {update} />
-            {/each}
-          </ul>
-        </div>
+    {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}
+      <div class="card-content box" style="height: 35vh; overflow: auto;">
+        <ul class="collapsible popout">
+          {#each $updates as update}
+            <Update {...update} />
+          {/each}
+        </ul>
+      </div>
       <div class="card-action" style="text-align: left;">
-        <div class="input-field inline s12 m5">
-          <input
-            id="add-news-Title"
-            type="text"
-            class="validate"
-            bind:value={newUpdateTitle} />
-          <label for="add-news-Title">Update Title</label>
-        </div>
-
-        <div class="input-field inline s12 m5">
-          <input
-            id="add-news-Msg"
-            type="text"
-            class="validate"
-            bind:value={newUpdateMsg} />
-          <label for="add-news-Msg">Update Message</label>
-        </div>
-
+        <form id="add-news-form">
+          <div class="input-field inline s12 m5">
+            <input
+              id="add-news-Title"
+              type="text"
+              class="validate"
+              bind:value={updateTitle} />
+            <label for="add-news-Title">Update Title</label>
+          </div>
+          <div class="input-field inline s12 m5">
+            <input
+              id="add-news-Msg"
+              type="text"
+              class="validate"
+              bind:value={updateContent} />
+            <label for="add-news-Msg">Update Message</label>
+          </div>
+        </form>
         <a href="#!" on:click={handleAddition}>
           <i class="material-icons green-text">add</i>
         </a>
       </div>
-
-    {:else}    
-        <div class="card-content box"  style = "height: 30vh; overflow: auto;">
-          <ul class="collapsible popout">
-            {#each Updates as update, i (i)}
-              <Update {update} />
-            {/each}
-          </ul>
-        </div>
-        {/if}
-
+    {:else}
+      <div class="card-content box" style="height: 53vh; overflow: auto;">
+        <ul class="collapsible popout">
+          {#each $updates as update}
+            <Update {...update} />
+          {/each}
+        </ul>
+      </div>
+    {/if}
   </div>
 </div>
-
-<style>
-</style>

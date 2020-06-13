@@ -2,7 +2,7 @@
   import Task from "./Task.svelte";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
-  import { db } from '../../API/firebaseHandler'
+  import { db } from "../../API/firebaseHandler";
 
   export let uid;
 
@@ -23,6 +23,8 @@
       task,
       isDone: false
     });
+
+    document.querySelector("#add-task-form").reset();
     task = "";
   }
 
@@ -42,32 +44,29 @@
 </script>
 
 <style>
-
-  .todo{
+  .todo {
     height: 88vh;
-    overflow: auto; 
+    overflow: auto;
     margin-right: 0;
   }
 
   @media only screen and (max-width: 768px) {
-    .row{
+    .row {
       margin: 0;
       width: 100%;
     }
 
-    .col.s12{
+    .col.s12 {
       margin: 0;
       padding: 0;
       width: 100%;
     }
-    
-    .todo{
+
+    .todo {
       height: 40vh;
     }
-
   }
 </style>
-
 
 <div class="row">
   <div class="col s12 m11">
@@ -81,14 +80,16 @@
         {/each}
       </div>
       <div class="card-action">
-        <div class="input-field inline s12 m5">
-          <input
-            id="add-task"
-            type="text"
-            class="validate"
-            bind:value={task} />
-          <label for="add-task">Task</label>
-        </div>
+        <form id="add-task-form">
+          <div class="input-field inline s12 m5">
+            <input
+              id="add-task"
+              type="text"
+              class="validate"
+              bind:value={task} />
+            <label for="add-task">Task</label>
+          </div>
+        </form>
         <a href="#!" on:click={add}>
           <i class="material-icons green-text">add</i>
         </a>

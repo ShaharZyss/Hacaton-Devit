@@ -22185,7 +22185,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (79:8) {#each $todos as task}
+    // (78:8) {#each $todos as task}
     function create_each_block(ctx) {
     	let current;
     	const task_1_spread_levels = [/*task*/ ctx[1]];
@@ -22231,7 +22231,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(79:8) {#each $todos as task}",
+    		source: "(78:8) {#each $todos as task}",
     		ctx
     	});
 
@@ -22247,6 +22247,7 @@ var app = (function () {
     	let div0;
     	let t2;
     	let div2;
+    	let form;
     	let div1;
     	let input;
     	let t3;
@@ -22285,6 +22286,7 @@ var app = (function () {
 
     			t2 = space();
     			div2 = element("div");
+    			form = element("form");
     			div1 = element("div");
     			input = element("input");
     			t3 = space();
@@ -22295,32 +22297,34 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$1, 74, 6, 1360);
-    			attr_dev(div0, "class", "card-content todo svelte-1dt67zp");
+    			add_location(span, file$1, 73, 6, 1412);
+    			attr_dev(div0, "class", "card-content todo svelte-u050rl");
     			set_style(div0, "height", "70vh");
     			set_style(div0, "overflow", "auto");
     			set_style(div0, "margin-right", "0");
-    			add_location(div0, file$1, 75, 6, 1409);
+    			add_location(div0, file$1, 74, 6, 1461);
     			attr_dev(input, "id", "add-task");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "validate");
-    			add_location(input, file$1, 84, 10, 1714);
+    			add_location(input, file$1, 84, 12, 1804);
     			attr_dev(label, "for", "add-task");
-    			add_location(label, file$1, 89, 10, 1843);
+    			add_location(label, file$1, 89, 12, 1943);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$1, 83, 8, 1664);
+    			add_location(div1, file$1, 83, 10, 1752);
+    			attr_dev(form, "id", "add-task-form");
+    			add_location(form, file$1, 82, 8, 1716);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$1, 92, 10, 1940);
+    			add_location(i, file$1, 93, 10, 2058);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$1, 91, 8, 1901);
+    			add_location(a, file$1, 92, 8, 2019);
     			attr_dev(div2, "class", "card-action");
-    			add_location(div2, file$1, 82, 6, 1630);
+    			add_location(div2, file$1, 81, 6, 1682);
     			attr_dev(div3, "class", "card");
-    			add_location(div3, file$1, 73, 4, 1335);
-    			attr_dev(div4, "class", "col s12 m11 svelte-1dt67zp");
-    			add_location(div4, file$1, 72, 2, 1305);
-    			attr_dev(div5, "class", "row svelte-1dt67zp");
-    			add_location(div5, file$1, 71, 0, 1285);
+    			add_location(div3, file$1, 72, 4, 1387);
+    			attr_dev(div4, "class", "col s12 m11 svelte-u050rl");
+    			add_location(div4, file$1, 71, 2, 1357);
+    			attr_dev(div5, "class", "row svelte-u050rl");
+    			add_location(div5, file$1, 70, 0, 1337);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22339,7 +22343,8 @@ var app = (function () {
 
     			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			append_dev(div2, div1);
+    			append_dev(div2, form);
+    			append_dev(form, div1);
     			append_dev(div1, input);
     			set_input_value(input, /*task*/ ctx[1]);
     			append_dev(div1, t3);
@@ -22444,6 +22449,7 @@ var app = (function () {
     	// };
     	function add() {
     		db$1.collection("todos").add({ uid, task, isDone: false });
+    		document.querySelector("#add-task-form").reset();
     		$$invalidate(1, task = "");
     	}
 
@@ -22753,7 +22759,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (69:6) {#each $events as event}
+    // (71:6) {#each $events as event}
     function create_each_block$1(ctx) {
     	let current;
     	const schedevent_spread_levels = [/*event*/ ctx[1]];
@@ -22799,7 +22805,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(69:6) {#each $events as event}",
+    		source: "(71:6) {#each $events as event}",
     		ctx
     	});
 
@@ -22814,6 +22820,7 @@ var app = (function () {
     	let div0;
     	let t2;
     	let div4;
+    	let form;
     	let div1;
     	let input0;
     	let t3;
@@ -22861,6 +22868,7 @@ var app = (function () {
 
     			t2 = space();
     			div4 = element("div");
+    			form = element("form");
     			div1 = element("div");
     			input0 = element("input");
     			t3 = space();
@@ -22883,45 +22891,47 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$3, 66, 4, 1418);
+    			add_location(span, file$3, 68, 4, 1474);
     			attr_dev(div0, "class", "card-content");
     			set_style(div0, "height", "20vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$3, 67, 4, 1463);
+    			add_location(div0, file$3, 69, 4, 1519);
     			attr_dev(input0, "id", "add-event");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$3, 76, 8, 1729);
+    			add_location(input0, file$3, 79, 10, 1822);
     			attr_dev(label0, "for", "add-event");
-    			add_location(label0, file$3, 77, 8, 1791);
+    			add_location(label0, file$3, 80, 10, 1886);
     			attr_dev(div1, "class", "input-field inline s12 m3");
-    			add_location(div1, file$3, 75, 6, 1681);
+    			add_location(div1, file$3, 78, 8, 1772);
     			attr_dev(input1, "id", "add-date");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "datepicker");
-    			add_location(input1, file$3, 81, 8, 1896);
+    			add_location(input1, file$3, 84, 10, 1997);
     			attr_dev(label1, "for", "add-date");
-    			add_location(label1, file$3, 82, 8, 1959);
+    			add_location(label1, file$3, 85, 10, 2062);
     			attr_dev(div2, "class", "input-field inline s12 m3");
-    			add_location(div2, file$3, 80, 6, 1848);
+    			add_location(div2, file$3, 83, 8, 1947);
     			attr_dev(input2, "id", "add-time");
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "class", "timepicker");
-    			add_location(input2, file$3, 86, 8, 2062);
+    			add_location(input2, file$3, 89, 10, 2171);
     			attr_dev(label2, "for", "add-time");
-    			add_location(label2, file$3, 87, 8, 2125);
+    			add_location(label2, file$3, 90, 10, 2236);
     			attr_dev(div3, "class", "input-field inline s12 m3");
-    			add_location(div3, file$3, 85, 6, 2014);
+    			add_location(div3, file$3, 88, 8, 2121);
+    			attr_dev(form, "id", "add-event-form");
+    			add_location(form, file$3, 77, 6, 1737);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$3, 91, 8, 2228);
+    			add_location(i, file$3, 95, 8, 2355);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$3, 90, 6, 2180);
+    			add_location(a, file$3, 94, 6, 2307);
     			attr_dev(div4, "class", "card-action");
-    			add_location(div4, file$3, 73, 4, 1648);
+    			add_location(div4, file$3, 75, 4, 1704);
     			attr_dev(div5, "class", "card");
-    			add_location(div5, file$3, 65, 2, 1386);
+    			add_location(div5, file$3, 67, 2, 1442);
     			attr_dev(div6, "class", "row");
-    			add_location(div6, file$3, 64, 0, 1366);
+    			add_location(div6, file$3, 66, 0, 1422);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22939,17 +22949,18 @@ var app = (function () {
 
     			append_dev(div5, t2);
     			append_dev(div5, div4);
-    			append_dev(div4, div1);
+    			append_dev(div4, form);
+    			append_dev(form, div1);
     			append_dev(div1, input0);
     			append_dev(div1, t3);
     			append_dev(div1, label0);
-    			append_dev(div4, t5);
-    			append_dev(div4, div2);
+    			append_dev(form, t5);
+    			append_dev(form, div2);
     			append_dev(div2, input1);
     			append_dev(div2, t6);
     			append_dev(div2, label1);
-    			append_dev(div4, t8);
-    			append_dev(div4, div3);
+    			append_dev(form, t8);
+    			append_dev(form, div3);
     			append_dev(div3, input2);
     			append_dev(div3, t9);
     			append_dev(div3, label2);
@@ -23045,6 +23056,7 @@ var app = (function () {
     		date = document.getElementById("add-date").value;
     		time = document.getElementById("add-time").value;
     		db$1.collection("schadule").add({ uid, event, date, time });
+    		document.querySelector("#add-event-form").reset();
     		$$invalidate(1, event = "");
     		date = "";
     		time = "";
@@ -23721,12 +23733,10 @@ var app = (function () {
     	let div0;
     	let i;
     	let t1;
-    	let t2_value = /*update*/ ctx[0].updateTitle + "";
     	let t2;
     	let t3;
     	let div1;
     	let span;
-    	let t4_value = /*update*/ ctx[0].updateMsg + "";
     	let t4;
 
     	const block = {
@@ -23736,19 +23746,19 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "update";
     			t1 = space();
-    			t2 = text(t2_value);
+    			t2 = text(/*updateTitle*/ ctx[0]);
     			t3 = space();
     			div1 = element("div");
     			span = element("span");
-    			t4 = text(t4_value);
+    			t4 = text(/*updateContent*/ ctx[1]);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$6, 12, 4, 256);
+    			add_location(i, file$6, 13, 4, 289);
     			attr_dev(div0, "class", "collapsible-header");
-    			add_location(div0, file$6, 11, 2, 219);
-    			add_location(span, file$6, 16, 4, 375);
+    			add_location(div0, file$6, 12, 2, 252);
+    			add_location(span, file$6, 17, 4, 401);
     			attr_dev(div1, "class", "collapsible-body");
-    			add_location(div1, file$6, 15, 2, 340);
-    			add_location(li, file$6, 10, 0, 212);
+    			add_location(div1, file$6, 16, 2, 366);
+    			add_location(li, file$6, 11, 0, 245);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -23765,8 +23775,8 @@ var app = (function () {
     			append_dev(span, t4);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*update*/ 1 && t2_value !== (t2_value = /*update*/ ctx[0].updateTitle + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*update*/ 1 && t4_value !== (t4_value = /*update*/ ctx[0].updateMsg + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*updateTitle*/ 1) set_data_dev(t2, /*updateTitle*/ ctx[0]);
+    			if (dirty & /*updateContent*/ 2) set_data_dev(t4, /*updateContent*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,
@@ -23787,14 +23797,15 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	let { update } = $$props;
+    	let { updateTitle } = $$props;
+    	let { updateContent } = $$props;
 
     	onMount(() => {
     		var elems = document.querySelectorAll(".collapsible");
     		var instances = M.Collapsible.init(elems, {});
     	});
 
-    	const writable_props = ["update"];
+    	const writable_props = ["updateTitle", "updateContent"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Update> was created with unknown prop '${key}'`);
@@ -23804,26 +23815,28 @@ var app = (function () {
     	validate_slots("Update", $$slots, []);
 
     	$$self.$set = $$props => {
-    		if ("update" in $$props) $$invalidate(0, update = $$props.update);
+    		if ("updateTitle" in $$props) $$invalidate(0, updateTitle = $$props.updateTitle);
+    		if ("updateContent" in $$props) $$invalidate(1, updateContent = $$props.updateContent);
     	};
 
-    	$$self.$capture_state = () => ({ onMount, update });
+    	$$self.$capture_state = () => ({ onMount, updateTitle, updateContent });
 
     	$$self.$inject_state = $$props => {
-    		if ("update" in $$props) $$invalidate(0, update = $$props.update);
+    		if ("updateTitle" in $$props) $$invalidate(0, updateTitle = $$props.updateTitle);
+    		if ("updateContent" in $$props) $$invalidate(1, updateContent = $$props.updateContent);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [update];
+    	return [updateTitle, updateContent];
     }
 
     class Update$1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { update: 0 });
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, { updateTitle: 0, updateContent: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -23835,16 +23848,28 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*update*/ ctx[0] === undefined && !("update" in props)) {
-    			console.warn("<Update> was created without expected prop 'update'");
+    		if (/*updateTitle*/ ctx[0] === undefined && !("updateTitle" in props)) {
+    			console.warn("<Update> was created without expected prop 'updateTitle'");
+    		}
+
+    		if (/*updateContent*/ ctx[1] === undefined && !("updateContent" in props)) {
+    			console.warn("<Update> was created without expected prop 'updateContent'");
     		}
     	}
 
-    	get update() {
+    	get updateTitle() {
     		throw new Error("<Update>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set update(value) {
+    	set updateTitle(value) {
+    		throw new Error("<Update>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get updateContent() {
+    		throw new Error("<Update>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set updateContent(value) {
     		throw new Error("<Update>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -23854,35 +23879,32 @@ var app = (function () {
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
-    	child_ctx[9] = i;
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
-    	child_ctx[9] = i;
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
-    // (62:4) {:else}
+    // (67:4) {:else}
     function create_else_block(ctx) {
     	let div;
     	let ul;
-    	let each_blocks = [];
-    	let each_1_lookup = new Map();
     	let current;
-    	let each_value_1 = /*Updates*/ ctx[1];
+    	let each_value_1 = /*$updates*/ ctx[3];
     	validate_each_argument(each_value_1);
-    	const get_key = ctx => /*i*/ ctx[9];
-    	validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
+    	let each_blocks = [];
 
     	for (let i = 0; i < each_value_1.length; i += 1) {
-    		let child_ctx = get_each_context_1(ctx, each_value_1, i);
-    		let key = get_key(child_ctx);
-    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1(key, child_ctx));
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
 
     	const block = {
     		c: function create() {
@@ -23894,11 +23916,11 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "collapsible popout");
-    			add_location(ul, file$7, 63, 10, 1782);
+    			add_location(ul, file$7, 68, 8, 1908);
     			attr_dev(div, "class", "card-content box");
-    			set_style(div, "height", "30vh");
+    			set_style(div, "height", "53vh");
     			set_style(div, "overflow", "auto");
-    			add_location(div, file$7, 62, 8, 1700);
+    			add_location(div, file$7, 67, 6, 1831);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -23911,12 +23933,31 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*Updates*/ 2) {
-    				const each_value_1 = /*Updates*/ ctx[1];
+    			if (dirty & /*$updates*/ 8) {
+    				each_value_1 = /*$updates*/ ctx[3];
     				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
     				group_outros();
-    				validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
-    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_1, each_1_lookup, ul, outro_and_destroy_block, create_each_block_1, null, get_each_context_1);
+
+    				for (i = each_value_1.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
     				check_outros();
     			}
     		},
@@ -23930,6 +23971,8 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				transition_out(each_blocks[i]);
     			}
@@ -23938,10 +23981,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].d();
-    			}
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -23949,21 +23989,20 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(62:4) {:else}",
+    		source: "(67:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:4) {#if accessLevel == 'manager'}
+    // (36:4) {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}
     function create_if_block$1(ctx) {
     	let div0;
     	let ul;
-    	let each_blocks = [];
-    	let each_1_lookup = new Map();
     	let t0;
     	let div3;
+    	let form;
     	let div1;
     	let input0;
     	let t1;
@@ -23979,16 +24018,17 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	let each_value = /*Updates*/ ctx[1];
+    	let each_value = /*$updates*/ ctx[3];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*i*/ ctx[9];
-    	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
+    	let each_blocks = [];
 
     	for (let i = 0; i < each_value.length; i += 1) {
-    		let child_ctx = get_each_context$3(ctx, each_value, i);
-    		let key = get_key(child_ctx);
-    		each_1_lookup.set(key, each_blocks[i] = create_each_block$3(key, child_ctx));
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
     	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
 
     	const block = {
     		c: function create() {
@@ -24001,6 +24041,7 @@ var app = (function () {
 
     			t0 = space();
     			div3 = element("div");
+    			form = element("form");
     			div1 = element("div");
     			input0 = element("input");
     			t1 = space();
@@ -24017,34 +24058,36 @@ var app = (function () {
     			i = element("i");
     			i.textContent = "add";
     			attr_dev(ul, "class", "collapsible popout");
-    			add_location(ul, file$7, 31, 6, 798);
+    			add_location(ul, file$7, 37, 8, 867);
     			attr_dev(div0, "class", "card-content box");
-    			set_style(div0, "height", "30vh");
+    			set_style(div0, "height", "35vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$7, 30, 4, 723);
+    			add_location(div0, file$7, 36, 6, 790);
     			attr_dev(input0, "id", "add-news-Title");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
-    			add_location(input0, file$7, 39, 10, 1072);
+    			add_location(input0, file$7, 46, 12, 1170);
     			attr_dev(label0, "for", "add-news-Title");
-    			add_location(label0, file$7, 44, 10, 1217);
+    			add_location(label0, file$7, 51, 12, 1322);
     			attr_dev(div1, "class", "input-field inline s12 m5");
-    			add_location(div1, file$7, 38, 8, 1022);
+    			add_location(div1, file$7, 45, 10, 1118);
     			attr_dev(input1, "id", "add-news-Msg");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "validate");
-    			add_location(input1, file$7, 48, 10, 1340);
+    			add_location(input1, file$7, 54, 12, 1450);
     			attr_dev(label1, "for", "add-news-Msg");
-    			add_location(label1, file$7, 53, 10, 1481);
+    			add_location(label1, file$7, 59, 12, 1602);
     			attr_dev(div2, "class", "input-field inline s12 m5");
-    			add_location(div2, file$7, 47, 8, 1290);
+    			add_location(div2, file$7, 53, 10, 1398);
+    			attr_dev(form, "id", "add-news-form");
+    			add_location(form, file$7, 44, 8, 1082);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$7, 57, 10, 1604);
+    			add_location(i, file$7, 63, 10, 1742);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$7, 56, 8, 1554);
+    			add_location(a, file$7, 62, 8, 1692);
     			attr_dev(div3, "class", "card-action");
     			set_style(div3, "text-align", "left");
-    			add_location(div3, file$7, 37, 6, 962);
+    			add_location(div3, file$7, 43, 6, 1022);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -24056,15 +24099,16 @@ var app = (function () {
 
     			insert_dev(target, t0, anchor);
     			insert_dev(target, div3, anchor);
-    			append_dev(div3, div1);
+    			append_dev(div3, form);
+    			append_dev(form, div1);
     			append_dev(div1, input0);
-    			set_input_value(input0, /*newUpdateTitle*/ ctx[2]);
+    			set_input_value(input0, /*updateTitle*/ ctx[1]);
     			append_dev(div1, t1);
     			append_dev(div1, label0);
-    			append_dev(div3, t3);
-    			append_dev(div3, div2);
+    			append_dev(form, t3);
+    			append_dev(form, div2);
     			append_dev(div2, input1);
-    			set_input_value(input1, /*newUpdateMsg*/ ctx[3]);
+    			set_input_value(input1, /*updateContent*/ ctx[2]);
     			append_dev(div2, t4);
     			append_dev(div2, label1);
     			append_dev(div3, t6);
@@ -24074,30 +24118,49 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
-    					listen_dev(a, "click", /*handleAddition*/ ctx[4], false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[7]),
+    					listen_dev(a, "click", /*handleAddition*/ ctx[5], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*Updates*/ 2) {
-    				const each_value = /*Updates*/ ctx[1];
+    			if (dirty & /*$updates*/ 8) {
+    				each_value = /*$updates*/ ctx[3];
     				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$3(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
     				group_outros();
-    				validate_each_keys(ctx, each_value, get_each_context$3, get_key);
-    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, outro_and_destroy_block, create_each_block$3, null, get_each_context$3);
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
     				check_outros();
     			}
 
-    			if (dirty & /*newUpdateTitle*/ 4 && input0.value !== /*newUpdateTitle*/ ctx[2]) {
-    				set_input_value(input0, /*newUpdateTitle*/ ctx[2]);
+    			if (dirty & /*updateTitle*/ 2 && input0.value !== /*updateTitle*/ ctx[1]) {
+    				set_input_value(input0, /*updateTitle*/ ctx[1]);
     			}
 
-    			if (dirty & /*newUpdateMsg*/ 8 && input1.value !== /*newUpdateMsg*/ ctx[3]) {
-    				set_input_value(input1, /*newUpdateMsg*/ ctx[3]);
+    			if (dirty & /*updateContent*/ 4 && input1.value !== /*updateContent*/ ctx[2]) {
+    				set_input_value(input1, /*updateContent*/ ctx[2]);
     			}
     		},
     		i: function intro(local) {
@@ -24110,6 +24173,8 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				transition_out(each_blocks[i]);
     			}
@@ -24118,11 +24183,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].d();
-    			}
-
+    			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div3);
     			mounted = false;
@@ -24134,39 +24195,38 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(30:4) {#if accessLevel == 'manager'}",
+    		source: "(36:4) {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:12) {#each Updates as update, i (i)}
-    function create_each_block_1(key_1, ctx) {
-    	let first;
+    // (70:10) {#each $updates as update}
+    function create_each_block_1(ctx) {
     	let current;
+    	const update_spread_levels = [/*update*/ ctx[9]];
+    	let update_props = {};
 
-    	const update = new Update$1({
-    			props: { update: /*update*/ ctx[7] },
-    			$$inline: true
-    		});
+    	for (let i = 0; i < update_spread_levels.length; i += 1) {
+    		update_props = assign(update_props, update_spread_levels[i]);
+    	}
+
+    	const update = new Update$1({ props: update_props, $$inline: true });
 
     	const block = {
-    		key: key_1,
-    		first: null,
     		c: function create() {
-    			first = empty();
     			create_component(update.$$.fragment);
-    			this.first = first;
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, first, anchor);
     			mount_component(update, target, anchor);
     			current = true;
     		},
     		p: function update$1(ctx, dirty) {
-    			const update_changes = {};
-    			if (dirty & /*Updates*/ 2) update_changes.update = /*update*/ ctx[7];
+    			const update_changes = (dirty & /*$updates*/ 8)
+    			? get_spread_update(update_spread_levels, [get_spread_object(/*update*/ ctx[9])])
+    			: {};
+
     			update.$set(update_changes);
     		},
     		i: function intro(local) {
@@ -24179,7 +24239,6 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(first);
     			destroy_component(update, detaching);
     		}
     	};
@@ -24188,39 +24247,38 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(65:12) {#each Updates as update, i (i)}",
+    		source: "(70:10) {#each $updates as update}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:8) {#each Updates as update, i (i)}
-    function create_each_block$3(key_1, ctx) {
-    	let first;
+    // (39:10) {#each $updates as update}
+    function create_each_block$3(ctx) {
     	let current;
+    	const update_spread_levels = [/*update*/ ctx[9]];
+    	let update_props = {};
 
-    	const update = new Update$1({
-    			props: { update: /*update*/ ctx[7] },
-    			$$inline: true
-    		});
+    	for (let i = 0; i < update_spread_levels.length; i += 1) {
+    		update_props = assign(update_props, update_spread_levels[i]);
+    	}
+
+    	const update = new Update$1({ props: update_props, $$inline: true });
 
     	const block = {
-    		key: key_1,
-    		first: null,
     		c: function create() {
-    			first = empty();
     			create_component(update.$$.fragment);
-    			this.first = first;
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, first, anchor);
     			mount_component(update, target, anchor);
     			current = true;
     		},
     		p: function update$1(ctx, dirty) {
-    			const update_changes = {};
-    			if (dirty & /*Updates*/ 2) update_changes.update = /*update*/ ctx[7];
+    			const update_changes = (dirty & /*$updates*/ 8)
+    			? get_spread_update(update_spread_levels, [get_spread_object(/*update*/ ctx[9])])
+    			: {};
+
     			update.$set(update_changes);
     		},
     		i: function intro(local) {
@@ -24233,7 +24291,6 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(first);
     			destroy_component(update, detaching);
     		}
     	};
@@ -24242,7 +24299,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(33:8) {#each Updates as update, i (i)}",
+    		source: "(39:10) {#each $updates as update}",
     		ctx
     	});
 
@@ -24261,7 +24318,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*accessLevel*/ ctx[0] == "manager") return 0;
+    		if (/*uid*/ ctx[0] == "Ao7kgtPHtLa58OsPJXeMbnj5wuI2") return 0;
     		return 1;
     	}
 
@@ -24277,12 +24334,12 @@ var app = (function () {
     			t1 = space();
     			if_block.c();
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$7, 27, 4, 638);
+    			add_location(span, file$7, 33, 4, 690);
     			attr_dev(div0, "class", "card");
     			set_style(div0, "text-align", "center");
-    			add_location(div0, file$7, 26, 2, 587);
+    			add_location(div0, file$7, 32, 2, 639);
     			attr_dev(div1, "class", "row");
-    			add_location(div1, file$7, 25, 0, 567);
+    			add_location(div1, file$7, 31, 0, 619);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24347,36 +24404,23 @@ var app = (function () {
     }
 
     function instance$7($$self, $$props, $$invalidate) {
-    	let { accessLevel } = $$props;
-
-    	let Updates = [
-    		{
-    			updateTitle: "The pizzas are Here!",
-    			updateMsg: "The key to getting a slice is to push, push and push people. They stand in your way!"
-    		},
-    		{
-    			updateTitle: "We finished!",
-    			updateMsg: "F*cking finally"
-    		}
-    	];
-
-    	let newUpdateTitle = "";
-    	let newUpdateMsg = "";
+    	let $updates;
+    	let { uid } = $$props;
+    	const query = db$1.collection("news");
+    	const updates = collectionData(query).pipe(startWith([]));
+    	validate_store(updates, "updates");
+    	component_subscribe($$self, updates, value => $$invalidate(3, $updates = value));
+    	let updateTitle = "";
+    	let updateContent = "";
 
     	const handleAddition = () => {
-    		$$invalidate(1, Updates = [
-    			...Updates,
-    			{
-    				updateTitle: newUpdateTitle,
-    				updateMsg: newUpdateMsg
-    			}
-    		]);
-
-    		$$invalidate(2, newUpdateTitle = "");
-    		$$invalidate(3, newUpdateMsg = "");
+    		db$1.collection("news").add({ updateTitle, updateContent });
+    		document.querySelector("#add-news-form").reset();
+    		$$invalidate(1, updateTitle = "");
+    		$$invalidate(2, updateContent = "");
     	};
 
-    	const writable_props = ["accessLevel"];
+    	const writable_props = ["uid"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<News> was created with unknown prop '${key}'`);
@@ -24386,33 +24430,37 @@ var app = (function () {
     	validate_slots("News", $$slots, []);
 
     	function input0_input_handler() {
-    		newUpdateTitle = this.value;
-    		$$invalidate(2, newUpdateTitle);
+    		updateTitle = this.value;
+    		$$invalidate(1, updateTitle);
     	}
 
     	function input1_input_handler() {
-    		newUpdateMsg = this.value;
-    		$$invalidate(3, newUpdateMsg);
+    		updateContent = this.value;
+    		$$invalidate(2, updateContent);
     	}
 
     	$$self.$set = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
+    		if ("uid" in $$props) $$invalidate(0, uid = $$props.uid);
     	};
 
     	$$self.$capture_state = () => ({
     		Update: Update$1,
-    		accessLevel,
-    		Updates,
-    		newUpdateTitle,
-    		newUpdateMsg,
-    		handleAddition
+    		collectionData,
+    		startWith,
+    		db: db$1,
+    		uid,
+    		query,
+    		updates,
+    		updateTitle,
+    		updateContent,
+    		handleAddition,
+    		$updates
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
-    		if ("Updates" in $$props) $$invalidate(1, Updates = $$props.Updates);
-    		if ("newUpdateTitle" in $$props) $$invalidate(2, newUpdateTitle = $$props.newUpdateTitle);
-    		if ("newUpdateMsg" in $$props) $$invalidate(3, newUpdateMsg = $$props.newUpdateMsg);
+    		if ("uid" in $$props) $$invalidate(0, uid = $$props.uid);
+    		if ("updateTitle" in $$props) $$invalidate(1, updateTitle = $$props.updateTitle);
+    		if ("updateContent" in $$props) $$invalidate(2, updateContent = $$props.updateContent);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -24420,10 +24468,11 @@ var app = (function () {
     	}
 
     	return [
-    		accessLevel,
-    		Updates,
-    		newUpdateTitle,
-    		newUpdateMsg,
+    		uid,
+    		updateTitle,
+    		updateContent,
+    		$updates,
+    		updates,
     		handleAddition,
     		input0_input_handler,
     		input1_input_handler
@@ -24433,7 +24482,7 @@ var app = (function () {
     class News extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { accessLevel: 0 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { uid: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -24445,16 +24494,16 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*accessLevel*/ ctx[0] === undefined && !("accessLevel" in props)) {
-    			console.warn("<News> was created without expected prop 'accessLevel'");
+    		if (/*uid*/ ctx[0] === undefined && !("uid" in props)) {
+    			console.warn("<News> was created without expected prop 'uid'");
     		}
     	}
 
-    	get accessLevel() {
+    	get uid() {
     		throw new Error("<News>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set accessLevel(value) {
+    	set uid(value) {
     		throw new Error("<News>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -24548,10 +24597,18 @@ var app = (function () {
     	let i0;
     	let t5;
     	let ul;
-    	let li;
+    	let li0;
     	let button1;
     	let i1;
     	let t7;
+    	let li1;
+    	let a0;
+    	let i2;
+    	let t9;
+    	let li2;
+    	let a1;
+    	let i3;
+    	let t11;
     	let current;
     	let mounted;
     	let dispose;
@@ -24575,7 +24632,7 @@ var app = (function () {
     		});
 
     	const news = new News({
-    			props: { accessLevel: /*accessLevel*/ ctx[0] },
+    			props: { uid: /*uid*/ ctx[2] },
     			$$inline: true
     		});
 
@@ -24604,38 +24661,60 @@ var app = (function () {
     			i0.textContent = "mode_edit";
     			t5 = space();
     			ul = element("ul");
-    			li = element("li");
+    			li0 = element("li");
     			button1 = element("button");
     			i1 = element("i");
     			i1.textContent = "close";
     			t7 = space();
+    			li1 = element("li");
+    			a0 = element("a");
+    			i2 = element("i");
+    			i2.textContent = "cloud";
+    			t9 = space();
+    			li2 = element("li");
+    			a1 = element("a");
+    			i3 = element("i");
+    			i3.textContent = "code";
+    			t11 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(div0, "class", "toDoList svelte-i8bpwr");
-    			add_location(div0, file$9, 99, 2, 1668);
-    			attr_dev(div1, "class", "schedule svelte-i8bpwr");
-    			add_location(div1, file$9, 104, 4, 1753);
-    			attr_dev(div2, "class", "update svelte-i8bpwr");
-    			add_location(div2, file$9, 109, 6, 1848);
-    			attr_dev(div3, "class", "News svelte-i8bpwr");
-    			add_location(div3, file$9, 113, 6, 1937);
-    			attr_dev(div4, "class", "innerBlock svelte-i8bpwr");
-    			add_location(div4, file$9, 108, 4, 1817);
-    			attr_dev(div5, "class", "MainBlock svelte-i8bpwr");
-    			add_location(div5, file$9, 103, 2, 1725);
+    			attr_dev(div0, "class", "toDoList svelte-bya1nh");
+    			add_location(div0, file$9, 97, 2, 1666);
+    			attr_dev(div1, "class", "schedule svelte-bya1nh");
+    			add_location(div1, file$9, 102, 4, 1751);
+    			attr_dev(div2, "class", "update svelte-bya1nh");
+    			add_location(div2, file$9, 107, 6, 1846);
+    			attr_dev(div3, "class", "News svelte-bya1nh");
+    			add_location(div3, file$9, 111, 6, 1935);
+    			attr_dev(div4, "class", "innerBlock svelte-bya1nh");
+    			add_location(div4, file$9, 106, 4, 1815);
+    			attr_dev(div5, "class", "MainBlock svelte-bya1nh");
+    			add_location(div5, file$9, 101, 2, 1723);
     			attr_dev(i0, "class", "large material-icons");
-    			add_location(i0, file$9, 121, 6, 2109);
+    			add_location(i0, file$9, 119, 6, 2099);
     			attr_dev(button0, "class", "btn-floating btn-large blue");
-    			add_location(button0, file$9, 120, 4, 2058);
+    			add_location(button0, file$9, 118, 4, 2048);
     			attr_dev(i1, "class", "material-icons");
-    			add_location(i1, file$9, 126, 10, 2273);
+    			add_location(i1, file$9, 124, 10, 2263);
     			attr_dev(button1, "class", "btn-floating red");
-    			add_location(button1, file$9, 125, 8, 2197);
-    			add_location(li, file$9, 124, 6, 2184);
-    			add_location(ul, file$9, 123, 4, 2173);
+    			add_location(button1, file$9, 123, 8, 2187);
+    			add_location(li0, file$9, 122, 6, 2174);
+    			attr_dev(i2, "class", "material-icons");
+    			add_location(i2, file$9, 129, 10, 2437);
+    			attr_dev(a0, "href", "https://drive.google.com/drive/");
+    			attr_dev(a0, "class", "btn-floating green accent-3");
+    			add_location(a0, file$9, 128, 8, 2348);
+    			add_location(li1, file$9, 127, 6, 2335);
+    			attr_dev(i3, "class", "material-icons");
+    			add_location(i3, file$9, 134, 10, 2601);
+    			attr_dev(a1, "href", "https://stackoverflow.com/");
+    			attr_dev(a1, "class", "btn-floating green accent-3");
+    			add_location(a1, file$9, 133, 8, 2517);
+    			add_location(li2, file$9, 132, 6, 2504);
+    			add_location(ul, file$9, 121, 4, 2163);
     			attr_dev(div6, "class", "fixed-action-btn");
-    			add_location(div6, file$9, 119, 2, 2023);
-    			attr_dev(div7, "class", "container svelte-i8bpwr");
-    			add_location(div7, file$9, 98, 0, 1642);
+    			add_location(div6, file$9, 117, 2, 2013);
+    			attr_dev(div7, "class", "container svelte-bya1nh");
+    			add_location(div7, file$9, 96, 0, 1640);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24661,10 +24740,18 @@ var app = (function () {
     			append_dev(button0, i0);
     			append_dev(div6, t5);
     			append_dev(div6, ul);
-    			append_dev(ul, li);
-    			append_dev(li, button1);
+    			append_dev(ul, li0);
+    			append_dev(li0, button1);
     			append_dev(button1, i1);
-    			insert_dev(target, t7, anchor);
+    			append_dev(ul, t7);
+    			append_dev(ul, li1);
+    			append_dev(li1, a0);
+    			append_dev(a0, i2);
+    			append_dev(ul, t9);
+    			append_dev(ul, li2);
+    			append_dev(li2, a1);
+    			append_dev(a1, i3);
+    			insert_dev(target, t11, anchor);
     			mount_component(footer, target, anchor);
     			current = true;
 
@@ -24685,7 +24772,7 @@ var app = (function () {
     			if (dirty & /*Updates*/ 2) teamupdates_changes.Updates = /*Updates*/ ctx[1];
     			teamupdates.$set(teamupdates_changes);
     			const news_changes = {};
-    			if (dirty & /*accessLevel*/ 1) news_changes.accessLevel = /*accessLevel*/ ctx[0];
+    			if (dirty & /*uid*/ 4) news_changes.uid = /*uid*/ ctx[2];
     			news.$set(news_changes);
     		},
     		i: function intro(local) {
@@ -24711,7 +24798,7 @@ var app = (function () {
     			destroy_component(schedule);
     			destroy_component(teamupdates);
     			destroy_component(news);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t11);
     			destroy_component(footer, detaching);
     			mounted = false;
     			dispose();
