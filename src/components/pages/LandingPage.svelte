@@ -4,8 +4,19 @@
   import TeamUpdates from "../TeamUpdatesComponents/TeamUpdate.svelte";
   import News from "../News/News.svelte";
   import Footer from "../Layout/Footer.svelte";
-  export let accessLevel;
+  import { onMount } from "svelte";
+  import { auth } from "../../API/firebaseHandler";
 
+  export let accessLevel = "manager";
+  export let Updates;
+  export let uid;
+
+  onMount(() => {
+    var elems = document.querySelectorAll(".fixed-action-btn");
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: "up"
+    });
+  });
 </script>
 
 <style>
@@ -55,25 +66,38 @@
 
 <div class="container">
   <div class="toDoList">
-    <ToDoLst />
+    <ToDoLst {uid} />
   </div>
 
   <div class="MainBlock">
     <div class="schedule">
-      <Schedule />
+      <Schedule {uid} />
     </div>
 
     <div class="innerBlock">
       <div class="update">
-        <TeamUpdates {accessLevel}/>
+        <TeamUpdates {accessLevel} {Updates} />
       </div>
 
       <div class="News">
-        <News {accessLevel}/>
+        <News {accessLevel} />
       </div>
     </div>
   </div>
 
+  <div class="fixed-action-btn">
+    <button class="btn-floating btn-large blue">
+      <i class="large material-icons">mode_edit</i>
+    </button>
+    <ul>
+      <li>
+        <button class="btn-floating red" on:click={() => auth.signOut()}>
+          <i class="material-icons">close</i>
+        </button>
+      </li>
+    </ul>
+  </div>
+
 </div>
 
-<Footer/>
+<Footer />
