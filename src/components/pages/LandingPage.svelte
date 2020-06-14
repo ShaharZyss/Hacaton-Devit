@@ -106,7 +106,7 @@
 
     <div class="innerBlock">
       <div class="update">
-        <TeamUpdates {accessLevel} {Updates} />
+        <TeamUpdates {uid} />
       </div>
 
       <div class="News">

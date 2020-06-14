@@ -2,7 +2,7 @@
   import Update from "./Update.svelte";
   
 
-  export let accessLevel;
+  export let uid;
   
   export let Updates = [
     { updateTitle: "Change of Idea", updateMsg: "We changed our idea (for the 3rd time) to the employee manager app." },
@@ -40,7 +40,7 @@
       </ul>
     </div>
 
-    {#if accessLevel == 'manager'}
+    {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}
       <div class="card-action"  style = "text-align: left;">
         <div class="input-field inline s12 m5">
           <input

@@ -23352,7 +23352,7 @@ var app = (function () {
     	return block;
     }
 
-    // (43:4) {#if accessLevel == 'manager'}
+    // (43:4) {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}
     function create_if_block(ctx) {
     	let div2;
     	let div0;
@@ -23392,28 +23392,28 @@ var app = (function () {
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "validate");
     			set_style(input0, "align-content", "left");
-    			add_location(input0, file$5, 45, 10, 1145);
+    			add_location(input0, file$5, 45, 10, 1150);
     			attr_dev(label0, "for", "add-update-Title");
-    			add_location(label0, file$5, 51, 10, 1333);
+    			add_location(label0, file$5, 51, 10, 1338);
     			attr_dev(div0, "class", "input-field inline s12 m5");
-    			add_location(div0, file$5, 44, 8, 1095);
+    			add_location(div0, file$5, 44, 8, 1100);
     			attr_dev(input1, "id", "add-update-Msg");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "validate");
     			set_style(input1, "align-content", "left");
-    			add_location(input1, file$5, 55, 10, 1489);
+    			add_location(input1, file$5, 55, 10, 1494);
     			attr_dev(label1, "for", "add-update-Msg");
-    			add_location(label1, file$5, 61, 10, 1673);
+    			add_location(label1, file$5, 61, 10, 1678);
     			attr_dev(div1, "class", "input-field inline s12 m5");
     			set_style(div1, "align-content", "center");
-    			add_location(div1, file$5, 54, 8, 1408);
+    			add_location(div1, file$5, 54, 8, 1413);
     			attr_dev(i, "class", "material-icons green-text");
-    			add_location(i, file$5, 65, 10, 1798);
+    			add_location(i, file$5, 65, 10, 1803);
     			attr_dev(a, "href", "#!");
-    			add_location(a, file$5, 64, 8, 1748);
+    			add_location(a, file$5, 64, 8, 1753);
     			attr_dev(div2, "class", "card-action");
     			set_style(div2, "text-align", "left");
-    			add_location(div2, file$5, 43, 6, 1032);
+    			add_location(div2, file$5, 43, 6, 1037);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -23462,7 +23462,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(43:4) {#if accessLevel == 'manager'}",
+    		source: "(43:4) {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}",
     		ctx
     	});
 
@@ -23491,7 +23491,7 @@ var app = (function () {
     		each_1_lookup.set(key, each_blocks[i] = create_each_block$2(key, child_ctx));
     	}
 
-    	let if_block = /*accessLevel*/ ctx[1] == "manager" && create_if_block(ctx);
+    	let if_block = /*uid*/ ctx[1] == "HbPyUME6D9SqNIU4NlZCQzrwydC3" && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -23510,17 +23510,17 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			attr_dev(span, "class", "card-title");
-    			add_location(span, file$5, 32, 4, 720);
+    			add_location(span, file$5, 32, 4, 712);
     			attr_dev(ul, "class", "collapsible popout");
-    			add_location(ul, file$5, 35, 6, 848);
+    			add_location(ul, file$5, 35, 6, 840);
     			attr_dev(div0, "class", "card-content box");
     			set_style(div0, "height", "30vh");
     			set_style(div0, "overflow", "auto");
-    			add_location(div0, file$5, 34, 4, 770);
+    			add_location(div0, file$5, 34, 4, 762);
     			attr_dev(div1, "class", "card");
-    			add_location(div1, file$5, 31, 2, 697);
+    			add_location(div1, file$5, 31, 2, 689);
     			attr_dev(div2, "class", "row");
-    			add_location(div2, file$5, 30, 0, 677);
+    			add_location(div2, file$5, 30, 0, 669);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -23551,7 +23551,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*accessLevel*/ ctx[1] == "manager") {
+    			if (/*uid*/ ctx[1] == "HbPyUME6D9SqNIU4NlZCQzrwydC3") {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -23603,7 +23603,7 @@ var app = (function () {
     }
 
     function instance$5($$self, $$props, $$invalidate) {
-    	let { accessLevel } = $$props;
+    	let { uid } = $$props;
 
     	let { Updates = [
     		{
@@ -23636,7 +23636,7 @@ var app = (function () {
     		$$invalidate(3, newUpdateMsg = "");
     	};
 
-    	const writable_props = ["accessLevel", "Updates"];
+    	const writable_props = ["uid", "Updates"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<TeamUpdate> was created with unknown prop '${key}'`);
@@ -23656,13 +23656,13 @@ var app = (function () {
     	}
 
     	$$self.$set = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("uid" in $$props) $$invalidate(1, uid = $$props.uid);
     		if ("Updates" in $$props) $$invalidate(0, Updates = $$props.Updates);
     	};
 
     	$$self.$capture_state = () => ({
     		Update,
-    		accessLevel,
+    		uid,
     		Updates,
     		newUpdateTitle,
     		newUpdateMsg,
@@ -23670,7 +23670,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("uid" in $$props) $$invalidate(1, uid = $$props.uid);
     		if ("Updates" in $$props) $$invalidate(0, Updates = $$props.Updates);
     		if ("newUpdateTitle" in $$props) $$invalidate(2, newUpdateTitle = $$props.newUpdateTitle);
     		if ("newUpdateMsg" in $$props) $$invalidate(3, newUpdateMsg = $$props.newUpdateMsg);
@@ -23682,7 +23682,7 @@ var app = (function () {
 
     	return [
     		Updates,
-    		accessLevel,
+    		uid,
     		newUpdateTitle,
     		newUpdateMsg,
     		handleAddition,
@@ -23694,7 +23694,7 @@ var app = (function () {
     class TeamUpdate extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { accessLevel: 1, Updates: 0 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { uid: 1, Updates: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -23706,16 +23706,16 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*accessLevel*/ ctx[1] === undefined && !("accessLevel" in props)) {
-    			console.warn("<TeamUpdate> was created without expected prop 'accessLevel'");
+    		if (/*uid*/ ctx[1] === undefined && !("uid" in props)) {
+    			console.warn("<TeamUpdate> was created without expected prop 'uid'");
     		}
     	}
 
-    	get accessLevel() {
+    	get uid() {
     		throw new Error("<TeamUpdate>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set accessLevel(value) {
+    	set uid(value) {
     		throw new Error("<TeamUpdate>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -23999,7 +23999,7 @@ var app = (function () {
     	return block;
     }
 
-    // (36:4) {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}
+    // (36:4) {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}
     function create_if_block$1(ctx) {
     	let div0;
     	let ul;
@@ -24198,7 +24198,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(36:4) {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}",
+    		source: "(36:4) {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}",
     		ctx
     	});
 
@@ -24321,7 +24321,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*uid*/ ctx[0] == "Ao7kgtPHtLa58OsPJXeMbnj5wuI2") return 0;
+    		if (/*uid*/ ctx[0] == "HbPyUME6D9SqNIU4NlZCQzrwydC3") return 0;
     		return 1;
     	}
 
@@ -24617,25 +24617,22 @@ var app = (function () {
     	let dispose;
 
     	const todolst = new TODO_Lst({
-    			props: { uid: /*uid*/ ctx[2] },
+    			props: { uid: /*uid*/ ctx[0] },
     			$$inline: true
     		});
 
     	const schedule = new Schedule({
-    			props: { uid: /*uid*/ ctx[2] },
+    			props: { uid: /*uid*/ ctx[0] },
     			$$inline: true
     		});
 
     	const teamupdates = new TeamUpdate({
-    			props: {
-    				accessLevel: /*accessLevel*/ ctx[0],
-    				Updates: /*Updates*/ ctx[1]
-    			},
+    			props: { uid: /*uid*/ ctx[0] },
     			$$inline: true
     		});
 
     	const news = new News({
-    			props: { uid: /*uid*/ ctx[2] },
+    			props: { uid: /*uid*/ ctx[0] },
     			$$inline: true
     		});
 
@@ -24687,35 +24684,35 @@ var app = (function () {
     			attr_dev(div2, "class", "update svelte-bya1nh");
     			add_location(div2, file$9, 107, 6, 1846);
     			attr_dev(div3, "class", "News svelte-bya1nh");
-    			add_location(div3, file$9, 111, 6, 1935);
+    			add_location(div3, file$9, 111, 6, 1917);
     			attr_dev(div4, "class", "innerBlock svelte-bya1nh");
     			add_location(div4, file$9, 106, 4, 1815);
     			attr_dev(div5, "class", "MainBlock svelte-bya1nh");
     			add_location(div5, file$9, 101, 2, 1723);
     			attr_dev(i0, "class", "large material-icons");
-    			add_location(i0, file$9, 119, 6, 2099);
+    			add_location(i0, file$9, 119, 6, 2081);
     			attr_dev(button0, "class", "btn-floating btn-large blue");
-    			add_location(button0, file$9, 118, 4, 2048);
+    			add_location(button0, file$9, 118, 4, 2030);
     			attr_dev(i1, "class", "material-icons");
-    			add_location(i1, file$9, 124, 10, 2263);
+    			add_location(i1, file$9, 124, 10, 2245);
     			attr_dev(button1, "class", "btn-floating red");
-    			add_location(button1, file$9, 123, 8, 2187);
-    			add_location(li0, file$9, 122, 6, 2174);
+    			add_location(button1, file$9, 123, 8, 2169);
+    			add_location(li0, file$9, 122, 6, 2156);
     			attr_dev(i2, "class", "material-icons");
-    			add_location(i2, file$9, 129, 10, 2437);
+    			add_location(i2, file$9, 129, 10, 2419);
     			attr_dev(a0, "href", "https://drive.google.com/drive/");
     			attr_dev(a0, "class", "btn-floating green accent-3");
-    			add_location(a0, file$9, 128, 8, 2348);
-    			add_location(li1, file$9, 127, 6, 2335);
+    			add_location(a0, file$9, 128, 8, 2330);
+    			add_location(li1, file$9, 127, 6, 2317);
     			attr_dev(i3, "class", "material-icons");
-    			add_location(i3, file$9, 134, 10, 2601);
+    			add_location(i3, file$9, 134, 10, 2583);
     			attr_dev(a1, "href", "https://stackoverflow.com/");
     			attr_dev(a1, "class", "btn-floating green accent-3");
-    			add_location(a1, file$9, 133, 8, 2517);
-    			add_location(li2, file$9, 132, 6, 2504);
-    			add_location(ul, file$9, 121, 4, 2163);
+    			add_location(a1, file$9, 133, 8, 2499);
+    			add_location(li2, file$9, 132, 6, 2486);
+    			add_location(ul, file$9, 121, 4, 2145);
     			attr_dev(div6, "class", "fixed-action-btn");
-    			add_location(div6, file$9, 117, 2, 2013);
+    			add_location(div6, file$9, 117, 2, 1995);
     			attr_dev(div7, "class", "container svelte-bya1nh");
     			add_location(div7, file$9, 96, 0, 1640);
     		},
@@ -24765,17 +24762,16 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const todolst_changes = {};
-    			if (dirty & /*uid*/ 4) todolst_changes.uid = /*uid*/ ctx[2];
+    			if (dirty & /*uid*/ 1) todolst_changes.uid = /*uid*/ ctx[0];
     			todolst.$set(todolst_changes);
     			const schedule_changes = {};
-    			if (dirty & /*uid*/ 4) schedule_changes.uid = /*uid*/ ctx[2];
+    			if (dirty & /*uid*/ 1) schedule_changes.uid = /*uid*/ ctx[0];
     			schedule.$set(schedule_changes);
     			const teamupdates_changes = {};
-    			if (dirty & /*accessLevel*/ 1) teamupdates_changes.accessLevel = /*accessLevel*/ ctx[0];
-    			if (dirty & /*Updates*/ 2) teamupdates_changes.Updates = /*Updates*/ ctx[1];
+    			if (dirty & /*uid*/ 1) teamupdates_changes.uid = /*uid*/ ctx[0];
     			teamupdates.$set(teamupdates_changes);
     			const news_changes = {};
-    			if (dirty & /*uid*/ 4) news_changes.uid = /*uid*/ ctx[2];
+    			if (dirty & /*uid*/ 1) news_changes.uid = /*uid*/ ctx[0];
     			news.$set(news_changes);
     		},
     		i: function intro(local) {
@@ -24840,9 +24836,9 @@ var app = (function () {
     	const click_handler = () => auth.signOut();
 
     	$$self.$set = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
-    		if ("Updates" in $$props) $$invalidate(1, Updates = $$props.Updates);
-    		if ("uid" in $$props) $$invalidate(2, uid = $$props.uid);
+    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("Updates" in $$props) $$invalidate(2, Updates = $$props.Updates);
+    		if ("uid" in $$props) $$invalidate(0, uid = $$props.uid);
     	};
 
     	$$self.$capture_state = () => ({
@@ -24859,22 +24855,22 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("accessLevel" in $$props) $$invalidate(0, accessLevel = $$props.accessLevel);
-    		if ("Updates" in $$props) $$invalidate(1, Updates = $$props.Updates);
-    		if ("uid" in $$props) $$invalidate(2, uid = $$props.uid);
+    		if ("accessLevel" in $$props) $$invalidate(1, accessLevel = $$props.accessLevel);
+    		if ("Updates" in $$props) $$invalidate(2, Updates = $$props.Updates);
+    		if ("uid" in $$props) $$invalidate(0, uid = $$props.uid);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [accessLevel, Updates, uid, click_handler];
+    	return [uid, accessLevel, Updates, click_handler];
     }
 
     class LandingPage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { accessLevel: 0, Updates: 1, uid: 2 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { accessLevel: 1, Updates: 2, uid: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -24886,11 +24882,11 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*Updates*/ ctx[1] === undefined && !("Updates" in props)) {
+    		if (/*Updates*/ ctx[2] === undefined && !("Updates" in props)) {
     			console.warn("<LandingPage> was created without expected prop 'Updates'");
     		}
 
-    		if (/*uid*/ ctx[2] === undefined && !("uid" in props)) {
+    		if (/*uid*/ ctx[0] === undefined && !("uid" in props)) {
     			console.warn("<LandingPage> was created without expected prop 'uid'");
     		}
     	}

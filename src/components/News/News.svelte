@@ -33,7 +33,7 @@
   <div class="card" style="text-align: center;">
     <span class="card-title">Company News</span>
 
-    {#if uid == 'Ao7kgtPHtLa58OsPJXeMbnj5wuI2'}
+    {#if uid == 'HbPyUME6D9SqNIU4NlZCQzrwydC3'}
       <div class="card-content box" style="height: 35vh; overflow: auto;">
         <ul class="collapsible popout">
           {#each $updates as update}
