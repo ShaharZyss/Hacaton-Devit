@@ -67,7 +67,7 @@
       <span class="card-title">To-Do List</span>
       <div
         class="card-content todo"
-        style="height: 70vh; overflow: auto; margin-right: 0;">
+        style="height: 73vh; overflow: auto; margin-right: 0;">
         {#each $todos as task}
           <Task {...task} on:delete={removeItem} />
         {/each}

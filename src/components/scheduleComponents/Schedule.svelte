@@ -65,7 +65,7 @@
 </style> -->
 
 <div class="row">
-  <div class="card" style="">
+  <div class="card">
     <span class="card-title">Schedule</span>
     <div class="card-content" style="height: 20vh; overflow: auto;">
       {#each $events as event}

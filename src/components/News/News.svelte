@@ -65,7 +65,7 @@
         </a>
       </div>
     {:else}
-      <div class="card-content box" style="height: 53vh; overflow: auto;">
+      <div class="card-content box" style="height: 38vh; overflow: auto;">
         <ul class="collapsible popout">
           {#each $updates as update}
             <Update {...update} />
